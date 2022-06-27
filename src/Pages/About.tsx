@@ -1,10 +1,7 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
-  return (
-    <div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum odio voluptatibus repudiandae, minus ducimus
-      architecto fugit dolorum commodi exercitationem quia cumque laudantium facilis, delectus sit.
-    </div>
-  );
+  const { t } = useTranslation();
+  return <div>{t('test2')} </div>;
 }

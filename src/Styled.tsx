@@ -18,17 +18,19 @@ body {
 `;
 
 export const Nav = styled.nav`
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
   display: flex;
   justify-content: flex-end;
   background: #333;
   padding: 10px 0;
   color: #fff;
   font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 2px;
   top: 0;
   width: 100%;
+  height: 60px;
+  line-height: 40px;
 
   & a {
     color: #fff;
@@ -41,15 +43,24 @@ export const Nav = styled.nav`
       color: #333;
     }
   }
-  & .Logo {
+  & .Logo > a {
+    width: 65px;
+    height: 65px;
     top: 0;
     left: 0;
+    padding: 0;
+    margin-top: 10px;
     margin-left: 10px;
     position: absolute;
+    :hover {
+      background: none;
+    }
   }
-  & .Logo p {
-    margin: auto;
-    padding: 10px;
+  & img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    filter: invert(100%);
   }
 `;
 

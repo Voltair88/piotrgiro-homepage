@@ -26,7 +26,7 @@ export default function Navbar() {
     <Nav>
       <div className="Logo">
         <Link to="/">
-          <p> React </p>
+          <img src={require('Assets/Logo/smallLogo.webp')} alt="logo" />
         </Link>
       </div>
       <Link to="/">{t('home')}</Link>
