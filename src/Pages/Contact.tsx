@@ -1,10 +1,8 @@
+import { t } from 'i18next';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
-  return (
-    <div>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam fugit hic magni sed accusantium sapiente rerum at
-      molestiae placeat atque.
-    </div>
-  );
+  const { t } = useTranslation();
+  return <div>{t('test')}</div>;
 }

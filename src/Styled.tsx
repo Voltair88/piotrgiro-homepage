@@ -18,16 +18,16 @@ body {
 `;
 
 export const Nav = styled.nav`
+  display: flex;
+  justify-content: flex-end;
   background: #333;
-  padding: 10px;
-  text-align: right;
+  padding: 10px 0;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   top: 0;
-  left: 0;
   width: 100%;
 
   & a {
@@ -41,19 +41,44 @@ export const Nav = styled.nav`
       color: #333;
     }
   }
+  & .Logo {
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    position: absolute;
+  }
+  & .Logo p {
+    margin: auto;
+    padding: 10px;
+  }
 `;
 
 export const Foot = styled.footer`
+  display: flex;
+  justify-content: space-between;
   background: #333;
-  padding: 10px;
-  text-align: center;
   color: #fff;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
+  line-height: 2;
+  height: 50px;
+
+  & a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: #fff;
+      color: #333;
+    }
+  }
+
+  & svg {
+    margin: 0;
+    padding: 10px;
+  }
 `;
