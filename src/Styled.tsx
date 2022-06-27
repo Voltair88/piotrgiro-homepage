@@ -1,15 +1,31 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyled = createGlobalStyle`
+
+html {
+    margin: 0;
+    scroll-behavior: smooth;
+
+    @media (max-width: 768px) {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+`;
 
 export const Nav = styled.nav`
   background: #333;
   padding: 10px;
-  text-align: center;
+  text-align: right;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
