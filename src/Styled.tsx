@@ -20,7 +20,6 @@ body {
     flex-direction: column;
 }
 body:after{
-
     content: "";
     display: block;
     height: 50px;
@@ -33,6 +32,9 @@ body:after{
     align-items: center;
     & .Logo-img {
         width: 50%;
+    }
+    & a {
+      padding: 0px 10px !important;
     }
   }
 .swiper-container {
