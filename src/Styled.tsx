@@ -15,6 +15,69 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+.swiper-container {
+    padding-top: 2vh;
+    width: 70%;
+    margin: auto;
+  }
+  .swiper {
+    display: flex;
+    flex-direction: row;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-button-next {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath d='M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+    top: 40%;
+  }
+  .swiper-button-next:after {
+    content: "";
+  }
+  .swiper-button-prev {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath d='M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+    top: 40%;
+  }
+  .swiper-button-prev:after {
+    content: "";
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+  }
+  .swiper-pagination {
+    z-index: 1 !important;
+  }
+  @media (max-width: 768px) {
+    .swiper-slide img {
+      border-radius: 0 0 10px 10px;
+    }
+    .swiper-container {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+
 `;
 
 export const Nav = styled.nav`
@@ -99,10 +162,10 @@ export const Nav = styled.nav`
 export const Foot = styled.footer`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #333;
   color: #fff;
-  font-size: 12px;
-  text-transform: uppercase;
+  font-size: 8px;
   letter-spacing: 2px;
   position: fixed;
   bottom: 0;
@@ -110,8 +173,18 @@ export const Foot = styled.footer`
   line-height: 2;
   height: 50px;
 
+  & p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 2px;
+    line-height: 2;
+  }
+
   & a {
-    color: #fff;
+    margin: 0 90px;
+    color: rgb(119, 119, 119);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     &:hover {
