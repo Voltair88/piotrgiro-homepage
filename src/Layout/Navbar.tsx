@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Nav } from '../Styled';
 import { Link } from 'react-router-dom';
 import i18n from 'i18next';
@@ -18,9 +19,16 @@ i18n.use(initReactI18next).init({
 
 export default function Navbar() {
   const { t } = useTranslation();
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) setScroll(true);
+      else setScroll(false);
+    });
+  }, []);
 
   return (
-    <Nav>
+    <Nav className={scroll ? 'scrolled' : 'notScrolled'}>
       <Logo />
       <Link to="/biography">{t('Biografi')}</Link>
       <Link to="/actor">{t('Skådespelaren')}</Link>

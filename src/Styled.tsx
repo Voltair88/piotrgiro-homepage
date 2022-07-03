@@ -12,9 +12,29 @@ html {
 }
 
 body {
+  position: relative;
+    min-height: 100vh;
     margin: 0;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
 }
+body:after{
+
+    content: "";
+    display: block;
+    height: 50px;
+}
+
+.scrolled {
+    background: #333333e3 !important;
+    padding: 0!important;
+    height: 50px!important;
+    align-items: center;
+    & .Logo-img {
+        width: 50%;
+    }
+  }
 .swiper-container {
     padding-top: 2vh;
     width: 70%;
@@ -62,7 +82,7 @@ body {
 
   .swiper-slide img {
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     object-fit: cover;
   }
   .swiper-pagination {
@@ -82,6 +102,7 @@ body {
 
 export const Nav = styled.nav`
   @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+  position: sticky;
   display: flex;
   justify-content: flex-end;
   background: #333;
@@ -94,6 +115,7 @@ export const Nav = styled.nav`
   width: 100%;
   height: 60px;
   line-height: 40px;
+  transition: all 0.1s ease-in-out;
 
   & a {
     color: #fff;
@@ -160,15 +182,15 @@ export const Nav = styled.nav`
 `;
 
 export const Foot = styled.footer`
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #333;
   color: #fff;
+  bottom: 0;
   font-size: 8px;
   letter-spacing: 2px;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   line-height: 2;
   height: 50px;
@@ -216,4 +238,16 @@ export const Page = styled.div`
   justify-content: center;
   margin: 20% auto;
   width: 80%;
+`;
+
+export const Show = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+
+  & iframe {
+    margin: 5px auto;
+  }
 `;
