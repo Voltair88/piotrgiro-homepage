@@ -1,6 +1,4 @@
-import About from 'Pages/About';
-import Contact from 'Pages/Contact';
-import Home from 'Pages/Home';
+import { Biography, Contact, Home, Actor, Dancer, Showreel } from './Pages/';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './Layout/Footer';
 import Navbar from './Layout/Navbar';
@@ -16,11 +14,14 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/biography" element={<Biography />} />
+            <Route path="/actor" element={<Actor />} />
+            <Route path="/dancer" element={<Dancer />} />
+            <Route path="/showreel" element={<Showreel />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
-        <Footer />
       </div>
     </Suspense>
   );

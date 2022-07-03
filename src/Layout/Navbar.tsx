@@ -4,7 +4,8 @@ import i18n from 'i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
 import { translationsEnglish } from 'Translations/TranslationEnglish';
 import { translationSvenska } from 'Translations/TranslationSvenska';
-
+import Logo from 'Components/Logo';
+import Languageselector from 'Components/Languageselector';
 i18n.use(initReactI18next).init({
   resources: {
     en: { translation: translationsEnglish },
@@ -18,24 +19,15 @@ i18n.use(initReactI18next).init({
 export default function Navbar() {
   const { t } = useTranslation();
 
-  const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    i18n.changeLanguage(event.target.value);
-  };
-
   return (
     <Nav>
-      <div className="Logo">
-        <Link to="/">
-          <img src={require('Assets/Logo/smallLogo.webp')} alt="logo" />
-        </Link>
-      </div>
-      <Link to="/">{t('home')}</Link>
-      <Link to="/about">{t('about')}</Link>
-      <Link to="/contact">{t('contact')}</Link>
-      <select name="language" onChange={onChange}>
-        <option value="sv">Svenska</option>
-        <option value="en">English</option>
-      </select>
+      <Logo />
+      <Link to="/biography">{t('Biografi')}</Link>
+      <Link to="/actor">{t('Skådespelaren')}</Link>
+      <Link to="/dancer">{t('Dansaren')}</Link>
+      <Link to="/Showreel">{t('Showreel')}</Link>
+      <Link to="/contact">{t('Kontakt')}</Link>
+      <Languageselector />
     </Nav>
   );
 }
