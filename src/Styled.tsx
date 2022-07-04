@@ -3,6 +3,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 export const GlobalStyled = createGlobalStyle`
 
 html {
+  height: 100%;
+  width: 100%;
     margin: 0;
     scroll-behavior: smooth;
 
@@ -52,11 +54,12 @@ body:after{
     flex-direction: row;
   }
   .swiper-slide {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
     text-align: center;
     font-size: 18px;
     background: #fff;
-    width: 100%;
-    height: 100%;
     border-radius: 0 0 10px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
