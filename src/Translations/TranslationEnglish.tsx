@@ -10,4 +10,8 @@ export const translationsEnglish = {
     'Piotr is active in theater, film, television & radio theater, he played the title roles in Romeo & Julia at Dramaten together with Cirkus Cirkörs. Played the title roles in Don Juan and Dantes Divine Comedy at Gothenburg City Theater. Played one of the main roles in the film Keillers Park, starred in Wellkåmm to Verona, The Girl the Mother and the Demons and others.',
   Dancer:
     'Piotr has worked with some of the worlds largest dance companies such as Batsheva Dance Ensemble, Cullberg Ballet, Ultima Vez / Wim Vandekeybus. He has worked with choreographers such as Édouard Lock from La la la Human Steps, Ohad Naharin, Angelin Preljocaj, Josef Nadj, Örjan Andersson, Helena Franzén, Bogdan & Carina, Fredrik "Benke" Rydman, Ina Christel Johanessen and others.',
+  Submit: 'Thank you, I will contact you as soon as possible!',
+  Email: 'Email',
+  Name: 'Name',
+  Message: 'Message',
 };
