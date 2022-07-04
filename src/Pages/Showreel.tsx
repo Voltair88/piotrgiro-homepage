@@ -15,11 +15,12 @@ export default function Showreel() {
       ></iframe>
       <iframe
         className="skeleton"
-        title="vimeo-player"
-        src="https://player.vimeo.com/video/371784314?h=dd6d41eee8"
-        width="640"
-        height="360"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/05XFB2ZOESg"
+        title="YouTube video player"
         frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
       <iframe

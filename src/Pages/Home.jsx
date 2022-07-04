@@ -53,7 +53,6 @@ export default function Home() {
       <Swiper {...swiperOptions}>
         <div className="swiper-button-prev"></div>
         <div className="swiper-button-next"></div>
-
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <img src={slide.src} alt={slide.alt} loading="lazy" className="skeleton" />
