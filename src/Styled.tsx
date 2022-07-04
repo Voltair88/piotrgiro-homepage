@@ -153,6 +153,10 @@ export const Nav = styled.nav`
       color: #333;
     }
   }
+  .active {
+    background-color: #fff;
+    color: #333;
+  }
   & .Logo > a {
     width: 65px;
     height: 65px;

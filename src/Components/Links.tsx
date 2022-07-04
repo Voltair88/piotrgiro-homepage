@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Languageselector from './Languageselector';
 
 export default function Links() {
@@ -7,11 +7,11 @@ export default function Links() {
 
   return (
     <>
-      <Link to="/biography">{t('Biografi')}</Link>
-      <Link to="/actor">{t('Skådespelaren')}</Link>
-      <Link to="/dancer">{t('Dansaren')}</Link>
-      <Link to="/Showreel">{t('Showreel')}</Link>
-      <Link to="/contact">{t('Kontakt')}</Link>
+      <NavLink to="/biography">{t('Biografi')}</NavLink>
+      <NavLink to="/actor">{t('Skådespelaren')}</NavLink>
+      <NavLink to="/dancer">{t('Dansaren')}</NavLink>
+      <NavLink to="/Showreel">{t('Showreel')}</NavLink>
+      <NavLink to="/contact">{t('Kontakt')}</NavLink>
       <Languageselector />
     </>
   );

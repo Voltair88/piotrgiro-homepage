@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Nav } from '../Styled';
-import Languageselector from 'Components/Languageselector';
 import Links from 'Components/Links';
 import Hamburger from 'hamburger-react';
 import Logo from 'Components/Logo';
