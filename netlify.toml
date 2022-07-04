@@ -1,2 +1,5 @@
 [[headers]]
-Cache-Control: max-age=31536000
+  for = "/*"
+  [headers.values]
+  cache-control = '''
+  max-age=31536000
