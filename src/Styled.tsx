@@ -34,10 +34,10 @@ body:after{
     padding: 0!important;
     height: 50px!important;
     align-items: center;
-    & .Logo-img {
+     .Logo-img {
         width: 50%;
     }
-    & a {
+     a {
       padding: 0px 10px !important;
     }
   }
@@ -108,13 +108,13 @@ body:after{
     }
   }
 
-  & .skeleton {
-    background-color: #c6c6c6;
-    background: linear-gradient(
-    100deg,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, .5) 50%,
-    rgba(255, 255, 255, 0) 60%
+  .skeleton {
+  background-color: #c6c6c6;
+  background: linear-gradient(
+  100deg,
+  rgba(255, 255, 255, 0) 40%,
+  rgba(255, 255, 255, .5) 50%,
+  rgba(255, 255, 255, 0) 60%
   ) #c6c6c6;
   background-size: 200% 100%;
   background-position-x: 180%;
@@ -145,7 +145,7 @@ body:after{
 `;
 
 export const Nav = styled.nav`
-  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Prodisplay=swap');
   position: sticky;
   display: flex;
   justify-content: flex-end;
@@ -162,13 +162,13 @@ export const Nav = styled.nav`
   transition: all 0.1s ease-in-out;
   z-index: 999 !important;
 
-  & a {
+  a {
     color: #fff;
     text-decoration: none;
     padding: 10px;
     display: inline-block;
     transition: all 0.3s ease-in-out;
-    &:hover {
+    :hover {
       background: #fff;
       color: #333;
     }
@@ -177,7 +177,7 @@ export const Nav = styled.nav`
     background-color: #fff;
     color: #333;
   }
-  & .Logo > a {
+  .Logo > a {
     width: 65px;
     height: 65px;
     top: 0;
@@ -190,17 +190,17 @@ export const Nav = styled.nav`
       background: none;
     }
   }
-  & .Logo-img {
+  .Logo-img {
     width: 100%;
     height: auto;
     margin: 0;
     filter: invert(100%);
     transition: all 0.3s ease-in-out;
   }
-  & .Logo-img:hover {
+  .Logo-img:hover {
     filter: invert(70%);
   }
-  & .flag {
+  .flag {
     color: #fff;
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -212,17 +212,17 @@ export const Nav = styled.nav`
     padding: 0;
     border: none;
     transition: all 0.3s ease-in-out;
-    &:hover {
+    :hover {
       background: #fff;
       color: #333;
     }
   }
 
-  & .languageselector {
+  .languageselector {
     display: flex;
     align-items: center;
     margin: 0 0 0 20px;
-    & p {
+    p {
       margin: auto 0;
       padding: 0;
       line-height: 40px;
@@ -237,7 +237,7 @@ export const Nav = styled.nav`
     .hamburger-react {
       display: none;
     }
-    & .hammenu {
+    .hammenu {
       display: none;
     }
   }
@@ -246,7 +246,7 @@ export const Nav = styled.nav`
     .navlinks {
       display: none;
     }
-    & .hamburger-react {
+    .hamburger-react {
       display: block;
       position: absolute;
       top: 0;
@@ -280,7 +280,7 @@ export const Foot = styled.footer`
   line-height: 2;
   height: 50px;
 
-  & p {
+  p {
     margin: 0;
     padding: 0;
     font-size: 12px;
@@ -289,25 +289,25 @@ export const Foot = styled.footer`
     line-height: 2;
   }
 
-  & a {
+  a {
     margin: 0 1vmax;
     color: rgb(119, 119, 119);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-    &:hover {
+    :hover {
       background: #fff;
       color: #333;
     }
   }
 
-  & svg {
+  svg {
     margin: 0;
     padding: 10px;
   }
 `;
 
 export const Page = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600display=swap');
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   font-size: 18px;
@@ -332,7 +332,7 @@ export const Show = styled.div`
   justify-content: center;
   margin: 10px auto;
 
-  & iframe {
+  iframe {
     margin: 5px auto;
     max-width: 100%;
     max-height: auto;
@@ -346,7 +346,7 @@ export const Form = styled.form`
   justify-content: center;
   margin: 10px auto;
   width: 80%;
-  & label {
+  label {
     margin: 10px auto;
     font-size: 18px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -358,7 +358,7 @@ export const Form = styled.form`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
   }
-  & input,
+  input,
   textarea {
     margin: 10px auto;
     max-width: 900px;
@@ -370,11 +370,11 @@ export const Form = styled.form`
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 2px;
     line-height: 2;
-    &:focus {
+    :focus {
       outline: none;
     }
   }
-  & button {
+  button {
     margin: 10px auto;
     max-width: 900px;
     padding: 10px;
@@ -384,7 +384,7 @@ export const Form = styled.form`
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 2px;
     line-height: 2;
-    &:focus {
+    :focus {
       outline: none;
     }
   }
