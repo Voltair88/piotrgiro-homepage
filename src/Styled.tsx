@@ -28,7 +28,6 @@ body:after{
     display: block;
     height: 50px;
 }
-
 .scrolled {
     background: #333333e3 !important;
     padding: 0!important;
@@ -43,69 +42,6 @@ body:after{
   }
   .notScrolled {
     align-items: center;
-  }
-.swiper-container {
-    padding-top: 2vh;
-    width: 70%;
-    margin: auto;
-  }
-  .swiper {
-    display: flex;
-    flex-direction: row;
-  }
-  .swiper-slide {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    border-radius: 0 0 10px 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-  .swiper-button-next {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath d='M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
-    top: 40%;
-  }
-  .swiper-button-next:after {
-    content: "";
-  }
-  .swiper-button-prev {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath d='M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
-    top: 40%;
-  }
-  .swiper-button-prev:after {
-    content: "";
-  }
-
-  .swiper-slide img {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-  }
-  .swiper-pagination {
-    z-index: 1 !important;
-  }
-  @media (max-width: 768px) {
-    .swiper-slide img {
-      border-radius: 0 0 10px 10px;
-    }
-    .swiper-container {
-      width: 100% !important;
-      margin: 0 !important;
-    }
   }
 
   .skeleton {
@@ -144,8 +80,71 @@ body:after{
   }
 `;
 
+export const Hom = styled.div`
+  .swiper-container {
+    padding-top: 2vh;
+    width: 70%;
+    margin: auto;
+  }
+  .swiper {
+    display: flex;
+    flex-direction: row;
+  }
+  .swiper-slide {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .swiper-button-next {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath d='M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+    top: 40%;
+  }
+  .swiper-button-next:after {
+    content: '';
+  }
+  .swiper-button-prev {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath d='M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+    top: 40%;
+  }
+  .swiper-button-prev:after {
+    content: '';
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+  .swiper-pagination {
+    z-index: 1 !important;
+  }
+  @media (max-width: 768px) {
+    .swiper-slide img {
+      border-radius: 0 0 10px 10px;
+    }
+    .swiper-container {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+`;
+
 export const Nav = styled.nav`
-  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Prodisplay=swap');
   position: sticky;
   display: flex;
   justify-content: flex-end;
@@ -307,7 +306,6 @@ export const Foot = styled.footer`
 `;
 
 export const Page = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600display=swap');
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   font-size: 18px;

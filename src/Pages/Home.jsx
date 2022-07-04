@@ -3,6 +3,7 @@ import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { PiotrGiro1, PiotrGiro2, PiotrGiro3, PiotrGiro4, PiotrGiro5 } from '../Assets/Pictures';
 import 'swiper/css/bundle';
+import { Hom } from 'Styled';
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 const slides = [
@@ -49,7 +50,7 @@ export default function Home() {
     },
   };
   return (
-    <div className="home">
+    <Hom>
       <Swiper {...swiperOptions}>
         <div className="swiper-button-prev"></div>
         <div className="swiper-button-next"></div>
@@ -59,6 +60,6 @@ export default function Home() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </Hom>
   );
 }
