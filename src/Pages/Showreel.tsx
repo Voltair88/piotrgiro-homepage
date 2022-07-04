@@ -4,6 +4,7 @@ export default function Showreel() {
   return (
     <Show>
       <iframe
+        className="skeleton"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/GSzP953UJlM"
@@ -13,6 +14,7 @@ export default function Showreel() {
         allowFullScreen
       ></iframe>
       <iframe
+        className="skeleton"
         title="vimeo-player"
         src="https://player.vimeo.com/video/371784314?h=dd6d41eee8"
         width="640"
@@ -21,6 +23,7 @@ export default function Showreel() {
         allowFullScreen
       ></iframe>
       <iframe
+        className="skeleton"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/GpplYQPzSxc"
@@ -30,6 +33,7 @@ export default function Showreel() {
         allowFullScreen
       ></iframe>
       <iframe
+        className="skeleton"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/RzCpF4VSQBo"
@@ -39,6 +43,7 @@ export default function Showreel() {
         allowFullScreen
       ></iframe>
       <iframe
+        className="skeleton"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/rLLD3WmikJs"
@@ -48,6 +53,7 @@ export default function Showreel() {
         allowFullScreen
       ></iframe>
       <iframe
+        className="skeleton"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/dK-J5b1MdgY"

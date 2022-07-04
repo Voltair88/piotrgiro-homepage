@@ -15,11 +15,11 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-    min-height: 100vh;
-    margin: 0;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 body:after{
     content: "";
@@ -105,6 +105,23 @@ body:after{
     }
   }
 
+  & .skeleton {
+    background-color: #c6c6c6;
+    background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, .5) 50%,
+    rgba(255, 255, 255, 0) 60%
+  ) #c6c6c6;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1s loading ease-in-out infinite;
+  }
+  @keyframes loading {
+  to {
+    background-position-x: -20%;
+  }
+}
 `;
 
 export const Nav = styled.nav`

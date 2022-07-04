@@ -56,7 +56,7 @@ export default function Home() {
 
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <img src={slide.src} alt={slide.alt} loading="lazy" />
+            <img src={slide.src} alt={slide.alt} loading="lazy" className="skeleton" />
           </SwiperSlide>
         ))}
       </Swiper>
