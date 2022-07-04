@@ -7,11 +7,11 @@ export default function Languageselector() {
   };
   return (
     <div className="languageselector">
-      <button onClick={() => onChange('en')} className="flag">
+      <button onClick={() => onChange('sv')} className="flag">
         <p>Sve</p>
       </button>
       <p>/</p>
-      <button onClick={() => onChange('sv')} className="flag">
+      <button onClick={() => onChange('en')} className="flag">
         <p>Eng</p>
       </button>
     </div>

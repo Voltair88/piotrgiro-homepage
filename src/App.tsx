@@ -4,6 +4,20 @@ import Footer from './Layout/Footer';
 import Navbar from './Layout/Navbar';
 import { GlobalStyled } from 'Styled';
 import { Suspense } from 'react';
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import { translationsEnglish } from 'Translations/TranslationEnglish';
+import { translationSvenska } from 'Translations/TranslationSvenska';
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: translationsEnglish },
+    sv: { translation: translationSvenska },
+  },
+  lng: 'sv',
+  fallbackLng: 'sv',
+  interpolation: { escapeValue: false },
+});
 
 function App() {
   return (

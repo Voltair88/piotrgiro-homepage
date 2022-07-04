@@ -13,6 +13,8 @@ html {
 
 body {
   position: relative;
+  width: 100%;
+  height: 100%;
     min-height: 100vh;
     margin: 0;
     font-family: sans-serif;
@@ -36,6 +38,9 @@ body:after{
     & a {
       padding: 0px 10px !important;
     }
+  }
+  .notScrolled {
+    align-items: center;
   }
 .swiper-container {
     padding-top: 2vh;
@@ -118,6 +123,7 @@ export const Nav = styled.nav`
   height: 60px;
   line-height: 40px;
   transition: all 0.1s ease-in-out;
+  z-index: 999 !important;
 
   & a {
     color: #fff;
@@ -181,6 +187,42 @@ export const Nav = styled.nav`
       line-height: 40px;
     }
   }
+  @media (min-width: 768px) {
+    .navlinks {
+      display: flex;
+      align-items: center;
+      margin: 0 0 0 20px;
+    }
+    .hamburger-react {
+      display: none;
+    }
+    & .hammenu {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navlinks {
+      display: none;
+    }
+    & .hamburger-react {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 40px;
+      height: 40px;
+    }
+    .hammenu {
+      padding-top: 60px;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background: #333;
+    }
+  }
 `;
 
 export const Foot = styled.footer`
@@ -207,7 +249,7 @@ export const Foot = styled.footer`
   }
 
   & a {
-    margin: 0 90px;
+    margin: 0 1vmax;
     color: rgb(119, 119, 119);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -251,5 +293,7 @@ export const Show = styled.div`
 
   & iframe {
     margin: 5px auto;
+    max-width: 100%;
+    max-height: auto;
   }
 `;

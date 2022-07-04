@@ -1,41 +1,42 @@
 import { useEffect, useState } from 'react';
 import { Nav } from '../Styled';
-import { Link } from 'react-router-dom';
-import i18n from 'i18next';
-import { initReactI18next, useTranslation } from 'react-i18next';
-import { translationsEnglish } from 'Translations/TranslationEnglish';
-import { translationSvenska } from 'Translations/TranslationSvenska';
-import Logo from 'Components/Logo';
 import Languageselector from 'Components/Languageselector';
-i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: translationsEnglish },
-    sv: { translation: translationSvenska },
-  },
-  lng: 'sv',
-  fallbackLng: 'sv',
-  interpolation: { escapeValue: false },
-});
+import Links from 'Components/Links';
+import Hamburger from 'hamburger-react';
+import Logo from 'Components/Logo';
 
 export default function Navbar() {
-  const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) setScroll(true);
+      if (window.scrollY > 100 && window.innerWidth > 768) setScroll(true);
       else setScroll(false);
     });
   }, []);
 
   return (
     <Nav className={scroll ? 'scrolled' : 'notScrolled'}>
+      <Hamburger
+        toggled={isOpen}
+        toggle={setIsOpen}
+        onToggle={() => {
+          if (isOpen) {
+            setIsOpen(false);
+          } else {
+            setIsOpen(true);
+          }
+        }}
+      />
+      {isOpen && (
+        <div className="hammenu">
+          <Links />
+        </div>
+      )}
       <Logo />
-      <Link to="/biography">{t('Biografi')}</Link>
-      <Link to="/actor">{t('Skådespelaren')}</Link>
-      <Link to="/dancer">{t('Dansaren')}</Link>
-      <Link to="/Showreel">{t('Showreel')}</Link>
-      <Link to="/contact">{t('Kontakt')}</Link>
-      <Languageselector />
+      <div className="navlinks">
+        <Links />
+      </div>
     </Nav>
   );
 }
