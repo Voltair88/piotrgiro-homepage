@@ -3,11 +3,9 @@ import styled, { createGlobalStyle } from 'styled-components';
 export const GlobalStyled = createGlobalStyle`
 
 html {
-  height: 100%;
   width: 100%;
     margin: 0;
     scroll-behavior: smooth;
-
     @media (max-width: 768px) {
         scroll-behavior: auto;
     }
