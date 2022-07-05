@@ -32,7 +32,7 @@ body:after{
     height: 50px!important;
     align-items: center;
      .Logo-img {
-        width: 50%;
+        width: 50% !important;
     }
      a {
       padding: 0px 10px !important;
@@ -172,6 +172,7 @@ export const Hom = styled.div`
     font-family: 'Source Sans Pro', sans-serif;
     height: 50px;
     font-size: 74px;
+    text-shadow: 1px 1px 1px #333;
     padding-left: 4vw;
   }
   a:first-of-type {
