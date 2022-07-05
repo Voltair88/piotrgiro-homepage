@@ -4,6 +4,7 @@ export const translationsEnglish = {
   Dansaren: 'Dancer',
   Kontakt: 'Contact',
   Showreel: 'Showreel',
+  Commercially: 'Commercially',
   biography:
     'Piotr is educated at the Royal Swedish Ballet School in Stockholm. Since 1995, he has been active in various contexts both in Sweden and abroad as a dancer, actor, choreographer. Piotr has performed at Dramaten, Stockholms Stadsteater, Unga Klara, Göteborgs Stadsteater, Cirkus Cirkör, Kungliga Operan, Norrlandsoperan, Teater Giljotin m.fl. Dance companies Piotr worked with include the Cullberg Ballet, Batsheva Dance Ensemble, Ultima Vez / Wim Vandekeybus and others. He has worked with choreographers such as Edouard Lock, Ohad Naharin, Angelin Preljokaj, Josef Nadj, Örjan Andersson, Fredrik “Benke” Rydman, Bogdan & Carina. And directors like Suzanne Osten, Etienne Glaser, Jasenko Selimovic, Eva Bergman.',
   Actor:
