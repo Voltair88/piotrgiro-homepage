@@ -171,7 +171,7 @@ export const Hom = styled.div`
   a h1 {
     font-family: 'Source Sans Pro', sans-serif;
     height: 50px;
-    font-size: 40px;
+    font-size: 74px;
     padding-left: 4vw;
   }
   a:first-of-type {
@@ -198,6 +198,10 @@ export const Hom = styled.div`
   a:nth-of-type(4n) {
     clip-path: polygon(100% 30%, 100% 100%, 0 100%, 0 0);
     margin-bottom: 10vh;
+  }
+  a:hover {
+    transform: scale(1.01);
+    transition: all 0.5s ease-in-out;
   }
 `;
 

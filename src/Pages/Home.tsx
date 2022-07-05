@@ -3,34 +3,37 @@ import Swiperplayer from '../Components/Swiperplayer';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { actor, dance, biografi, kommercielt } from '../Assets/Pictures';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <Hom>
       <ParallaxProvider>
         <Swiperplayer />
         <div className="sections">
           <NavLink to="/biography">
-            <img src={biografi} alt="Biografy" />
+            <img src={biografi} alt="Biografy" className="skeleton" />
             <Parallax speed={40} translateY={[50, -150]}>
-              <h1>Biografy</h1>
+              <h1>{t('Biografi')}</h1>
             </Parallax>
           </NavLink>
           <NavLink to="/Actor">
-            <img src={actor} alt="Actor" />
+            <img src={actor} alt="Actor" className="skeleton" />
             <Parallax translateY={[0, -150]}>
-              <h1>Actor</h1>
+              <h1>{t('Skådespelaren')}</h1>
             </Parallax>
           </NavLink>
           <NavLink to="/dancer">
-            <img src={dance} alt="Dance" />
+            <img src={dance} alt="Dance" className="skeleton" />
             <Parallax translateY={[50, -50]}>
-              <h1>Dancer</h1>
+              <h1>{t('Dansaren')}</h1>
             </Parallax>
           </NavLink>
           <NavLink to="/commercially">
-            <img src={kommercielt} alt="commercially" />
+            <img src={kommercielt} alt="commercially" className="skeleton" />
             <Parallax translateY={[-50, -150]}>
-              <h1>Kommercielt</h1>
+              <h1>{t('Commercially')}</h1>
             </Parallax>
           </NavLink>
         </div>
