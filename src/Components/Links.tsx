@@ -10,8 +10,9 @@ export default function Links() {
       <NavLink to="/biography">{t('Biografi')}</NavLink>
       <NavLink to="/actor">{t('Skådespelaren')}</NavLink>
       <NavLink to="/dancer">{t('Dansaren')}</NavLink>
-      <NavLink to="/Showreel">{t('Showreel')}</NavLink>
       <NavLink to="/commercially">{t('Commercially')}</NavLink>
+      <NavLink to="/Showreel">{t('Showreel')}</NavLink>
+      <NavLink to="/CV">CV</NavLink>
       <NavLink to="/contact">{t('Kontakt')}</NavLink>
       <Languageselector />
     </>

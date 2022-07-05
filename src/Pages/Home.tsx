@@ -14,25 +14,25 @@ export default function Home() {
         <div className="sections">
           <NavLink to="/biography">
             <img src={biografi} alt="Biografy" className="skeleton" />
-            <Parallax speed={40} translateY={[50, -150]}>
+            <Parallax speed={40} translateY={[0, -50]}>
               <h1>{t('Biografi')}</h1>
             </Parallax>
           </NavLink>
           <NavLink to="/Actor">
             <img src={actor} alt="Actor" className="skeleton" />
-            <Parallax translateY={[0, -150]}>
+            <Parallax translateY={[0, -50]}>
               <h1>{t('Skådespelaren')}</h1>
             </Parallax>
           </NavLink>
           <NavLink to="/dancer">
             <img src={dance} alt="Dance" className="skeleton" />
-            <Parallax translateY={[50, -50]}>
+            <Parallax translateY={[0, -50]}>
               <h1>{t('Dansaren')}</h1>
             </Parallax>
           </NavLink>
           <NavLink to="/commercially">
             <img src={kommercielt} alt="commercially" className="skeleton" />
-            <Parallax translateY={[-50, -150]}>
+            <Parallax translateY={[0, -50]}>
               <h1>{t('Commercially')}</h1>
             </Parallax>
           </NavLink>

@@ -134,9 +134,6 @@ export const Hom = styled.div`
     z-index: 1 !important;
   }
   @media (max-width: 768px) {
-    .swiper-slide img {
-      border-radius: 0 0 10px 10px;
-    }
     .swiper-container {
       width: 100% !important;
       margin: 0 !important;
@@ -175,34 +172,48 @@ export const Hom = styled.div`
     text-shadow: 1px 1px 1px #333;
     padding-left: 4vw;
   }
-  a:first-of-type {
-    padding-top: 10vh;
-    margin-bottom: -20vh;
-    clip-path: polygon(100% 0%, 100% 100%, 0 74%, 0 0);
+  @media (max-width: 768px) {
+    a {
+      height: 300px;
+      margin: 2vh auto;
+    }
+    a img {
+      height: 300px;
+    }
+    a h1 {
+      font-size: 8vw;
+    }
   }
-  a:nth-of-type(2n) {
-    clip-path: polygon(100% 30%, 100% 100%, 0 70%, 0 0);
-    margin-bottom: -20vh;
-  }
-  a:nth-of-type(2n) img {
-    object-position: 0% 0%;
-    transform: scaleX(-1);
-    object-position: 0% 60%;
-  }
-  a:nth-of-type(3n) img {
-    object-position: 0% 0%;
-  }
-  a:nth-of-type(3n) {
-    clip-path: polygon(100% 30%, 100% 100%, 0 70%, 0 0);
-    margin-bottom: -20vh;
-  }
-  a:nth-of-type(4n) {
-    clip-path: polygon(100% 30%, 100% 100%, 0 100%, 0 0);
-    margin-bottom: 10vh;
-  }
-  a:hover {
-    transform: scale(1.01);
-    transition: all 0.5s ease-in-out;
+  @media (min-width: 768px) {
+    a:first-of-type {
+      padding-top: 10vh;
+      margin-bottom: -20vh;
+      clip-path: polygon(100% 0%, 100% 100%, 0 74%, 0 0);
+    }
+    a:nth-of-type(2n) {
+      clip-path: polygon(100% 30%, 100% 100%, 0 70%, 0 0);
+      margin-bottom: -20vh;
+    }
+    a:nth-of-type(2n) img {
+      object-position: 0% 0%;
+      transform: scaleX(-1);
+      object-position: 0% 60%;
+    }
+    a:nth-of-type(3n) img {
+      object-position: 0% 0%;
+    }
+    a:nth-of-type(3n) {
+      clip-path: polygon(100% 30%, 100% 100%, 0 70%, 0 0);
+      margin-bottom: -20vh;
+    }
+    a:nth-of-type(4n) {
+      clip-path: polygon(100% 30%, 100% 100%, 0 100%, 0 0);
+      margin-bottom: 10vh;
+    }
+    a:hover {
+      transform: scale(1.01);
+      transition: all 0.5s ease-in-out;
+    }
   }
 `;
 
@@ -213,7 +224,7 @@ export const Nav = styled.nav`
   background: #333;
   padding: 10px 0;
   color: #fff;
-  font-size: 20px;
+  font-size: 2vmin;
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 2px;
   top: 0;
@@ -226,7 +237,10 @@ export const Nav = styled.nav`
   a {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
+    height: 20px;
+    line-height: 20px;
+    padding: 7px 0.5vw;
+    margin: 0 2px;
     display: inline-block;
     transition: all 0.3s ease-in-out;
     :hover {
@@ -289,7 +303,7 @@ export const Nav = styled.nav`
       line-height: 40px;
     }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     .navlinks {
       display: flex;
       align-items: center;
@@ -303,7 +317,7 @@ export const Nav = styled.nav`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .navlinks {
       display: none;
     }
