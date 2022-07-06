@@ -303,7 +303,7 @@ export const Nav = styled.nav`
       line-height: 40px;
     }
   }
-  @media (min-width: 900px) {
+  @media (min-width: 1000px) {
     .navlinks {
       display: flex;
       align-items: center;
@@ -317,7 +317,7 @@ export const Nav = styled.nav`
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     .navlinks {
       display: none;
     }
