@@ -224,7 +224,7 @@ export const Nav = styled.nav`
   background: #333;
   padding: 10px 0;
   color: #fff;
-  font-size: 2vmin;
+  font-size: 1.2rem;
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 2px;
   top: 0;
