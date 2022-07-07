@@ -189,7 +189,7 @@ export const Hom = styled.div`
     a:first-of-type {
       margin-top: 10vh;
       margin-bottom: -20vh;
-      clip-path: polygon(100% 0%, 100% 100%, 0 74%, 0 0);
+      clip-path: polygon(100% 0%, 100% 100%, 0 70%, 0 0);
     }
     a:nth-of-type(2n) {
       clip-path: polygon(100% 30%, 100% 100%, 0 70%, 0 0);
