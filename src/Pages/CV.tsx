@@ -1,5 +1,5 @@
-import React from 'react';
+import { Page } from 'Styled';
 
 export default function CV() {
-  return <div>CV</div>;
+  return <Page>Coming soon</Page>;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
+import { Page } from 'Styled';
 
 export default function commercially() {
-  return <div>Coming soon</div>;
+  return <Page>Coming soon</Page>;
 }
