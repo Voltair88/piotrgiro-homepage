@@ -6,6 +6,7 @@ html {
   width: 100%;
     margin: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
     @media (max-width: 768px) {
         scroll-behavior: auto;
     }
@@ -364,20 +365,55 @@ export const Foot = styled.footer`
     line-height: 2;
   }
 
-  a {
-    margin: 0 1vmax;
-    color: rgb(119, 119, 119);
+  p a {
     text-decoration: none;
+    color: #fff;
     transition: all 0.3s ease-in-out;
     :hover {
-      background: #fff;
-      color: #333;
+      color: #7e804d;
     }
   }
 
+  .insta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 1vmax;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid #8a8a8a;
+    color: rgb(119, 119, 119);
+    text-decoration: none;
+    transition: 0.5s;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .insta:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3b5999;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  .insta:hover:before {
+    top: 0;
+  }
+  .insta:hover svg {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
   svg {
-    margin: 0;
-    padding: 10px;
+    position: relative;
+    width: 70%;
+    height: 70%;
+    transition: 0.5s;
+    z-index: 3;
   }
 `;
 
