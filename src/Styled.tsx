@@ -36,7 +36,7 @@ body:after{
         width: 50% !important;
     }
      a {
-      padding: 0px 10px !important;
+      padding: 10px 10px !important;
     }
   }
   .notScrolled {
@@ -187,7 +187,7 @@ export const Hom = styled.div`
   }
   @media (min-width: 768px) {
     a:first-of-type {
-      padding-top: 10vh;
+      margin-top: 10vh;
       margin-bottom: -20vh;
       clip-path: polygon(100% 0%, 100% 100%, 0 74%, 0 0);
     }
@@ -240,8 +240,9 @@ export const Nav = styled.nav`
     text-decoration: none;
     height: 20px;
     line-height: 20px;
-    padding: 7px 0.5vw;
+    padding: 10px 0.5vw;
     margin: 0 2px;
+    border-radius: 5px;
     display: inline-block;
     transition: all 0.3s ease-in-out;
     :hover {
