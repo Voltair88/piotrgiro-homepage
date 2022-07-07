@@ -32,16 +32,25 @@ body:after{
     padding: 0!important;
     height: 50px!important;
     align-items: center;
+    a {
+      padding: 10px 10px !important;
+    }
+    .Logo a {
+      padding: 0!important;
+    }
      .Logo-img {
         width: 50% !important;
-    }
-     a {
-      padding: 10px 10px !important;
     }
   }
   .notScrolled {
     align-items: center;
   }
+  @media (max-width: 1000px) {
+    .notScrolled {
+      padding: 0!important;
+    }
+  }
+
 
   .skeleton {
   background-color: #c6c6c6;
@@ -276,6 +285,12 @@ export const Nav = styled.nav`
   }
   .Logo-img:hover {
     filter: invert(70%);
+  }
+  @media (max-width: 1000px) {
+    .Logo-img {
+      width: 70%;
+      height: auto;
+    }
   }
   .flag {
     color: #fff;
