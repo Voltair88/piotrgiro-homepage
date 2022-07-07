@@ -7,5 +7,6 @@ import actor from './actor.webp';
 import dance from './dance.webp';
 import biografi from './biografi.webp';
 import kommercielt from './kommercielt.webp';
+import biografi2 from './biografi2.jpg';
 
-export { PiotrGiro1, PiotrGiro2, PiotrGiro3, PiotrGiro4, PiotrGiro5, actor, dance, biografi, kommercielt };
+export { PiotrGiro1, PiotrGiro2, PiotrGiro3, PiotrGiro4, PiotrGiro5, actor, dance, biografi, kommercielt, biografi2 };

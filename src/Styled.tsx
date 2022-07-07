@@ -436,6 +436,47 @@ export const Page = styled.div`
   width: 80%;
 `;
 
+export const Bio = styled.body`
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #444;
+  text-shadow: 1px 1px 1px #fff;
+  text-rendering: optimizeLegibility !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  .div1 {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .div2 {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  .div3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  img {
+    width: 80%;
+    height: auto;
+  }
+`;
+
 export const Show = styled.div`
   display: flex;
   flex-direction: column;
