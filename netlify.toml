@@ -4,7 +4,13 @@
   cache-control = "public, max-age=31536000"
 
 [[redirects]]
-from = "/en/nu/"
-to = "/"
-status = 301
-force = true
+  from = "/en/nu/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/biografi-pa-svenska/"
+  to = "/biography"
+  status = 301
+  force = true
