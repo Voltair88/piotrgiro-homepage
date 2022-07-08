@@ -454,9 +454,9 @@ export const Bio = styled.body`
     width: 100%;
     height: 350px;
     transition: all 0.3s ease-in-out;
-    background-position: 'center';
-    background-size: 'cover';
-    background-repeat: 'no-repeat';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   p {
     font-size: 22px;
