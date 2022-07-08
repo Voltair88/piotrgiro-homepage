@@ -147,7 +147,7 @@ export const Hom = styled.div`
     color: #fff;
     height: auto;
     width: 100%;
-    height: 750px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     padding: 30px auto;
@@ -156,7 +156,7 @@ export const Hom = styled.div`
   a img {
     position: absolute;
     width: 100%;
-    height: 750px;
+    height: 1000px;
     object-fit: cover;
   }
   a h1 {
@@ -167,9 +167,12 @@ export const Hom = styled.div`
     padding-left: 4vw;
   }
   @media (max-width: 768px) {
+    .par {
+      transform: translateY(0) !important;
+    }
     a {
       height: 300px;
-      margin: 2vh auto;
+      margin: 20px 0;
     }
     a img {
       height: 300px;
@@ -180,29 +183,31 @@ export const Hom = styled.div`
   }
   @media (min-width: 768px) {
     a:first-of-type {
-      margin-top: 10vh;
-      margin-bottom: -20vh;
+      margin-top: 5vh;
+      margin-bottom: -10%;
       clip-path: polygon(100% 0%, 100% 100%, 0 70%, 0 0);
     }
     a:nth-of-type(2n) {
       clip-path: polygon(100% 30%, 100% 100%, 0 70%, 0 0);
-      margin-bottom: -20vh;
-    }
-    a:nth-of-type(2n) img {
-      object-position: 0% 0%;
-      transform: scaleX(-1);
-      object-position: 0% 60%;
-    }
-    a:nth-of-type(3n) img {
-      object-position: 0% 0%;
+      margin-bottom: -10%;
+
+      img {
+        object-position: 0% 60%;
+      }
     }
     a:nth-of-type(3n) {
       clip-path: polygon(100% 30%, 100% 100%, 0 70%, 0 0);
-      margin-bottom: -20vh;
+      margin-bottom: -5%;
+      img {
+        object-position: 0% 0%;
+      }
     }
+
     a:nth-of-type(4n) {
+      margin-top: -5%;
+      margin-bottom: 5%;
+
       clip-path: polygon(100% 30%, 100% 100%, 0 100%, 0 0);
-      margin-bottom: 10vh;
     }
     a:hover {
       transform: scale(1.01);
