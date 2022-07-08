@@ -9,7 +9,7 @@ export default function Navbar() {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 100 && window.innerWidth > 768) setScroll(true);
+      if (window.scrollY > 80 && window.innerWidth > 768) setScroll(true);
       else setScroll(false);
     });
   }, []);
