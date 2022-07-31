@@ -176,39 +176,13 @@ export const Hom = styled.div`
     }
     a img {
       height: 300px;
+      padding: 10px;
     }
     a h1 {
       font-size: 8vw;
     }
   }
   @media (min-width: 768px) {
-    a:first-of-type {
-      margin-top: 5vh;
-      margin-bottom: -10%;
-      clip-path: polygon(100% 0%, 100% 100%, 0 70%, 0 0);
-    }
-    a:nth-of-type(2n) {
-      clip-path: polygon(100% 30%, 100% 100%, 0 70%, 0 0);
-      margin-bottom: -10%;
-
-      img {
-        object-position: 0% 60%;
-      }
-    }
-    a:nth-of-type(3n) {
-      clip-path: polygon(100% 30%, 100% 100%, 0 70%, 0 0);
-      margin-bottom: -5%;
-      img {
-        object-position: 0% 0%;
-      }
-    }
-
-    a:nth-of-type(4n) {
-      margin-top: -5%;
-      margin-bottom: 5%;
-
-      clip-path: polygon(100% 30%, 100% 100%, 0 100%, 0 0);
-    }
     a:hover {
       transform: scale(1.01);
       transition: all 0.5s ease-in-out;
@@ -223,7 +197,7 @@ export const Nav = styled.nav`
   background: #333;
   padding: 10px 0;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 2px;
   top: 0;
