@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyled = createGlobalStyle`
-
 html {
   width: 100%;
     margin: 0;
@@ -412,22 +411,9 @@ export const Page = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 20% auto;
-  width: 80%;
 `;
 
-export const Bio = styled.body`
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
-  color: #444;
-  text-shadow: 1px 1px 1px #fff;
-  text-rendering: optimizeLegibility !important;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const Bio = styled(Page)`
   h1 {
     font-size: 60px;
     line-height: 40px;
@@ -448,13 +434,12 @@ export const Bio = styled.body`
   }
 `;
 
-export const Show = styled.div`
+export const Show = styled(Page)`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 10px auto;
-
   iframe {
     margin: 5px auto;
     max-width: 100%;
@@ -462,17 +447,10 @@ export const Show = styled.div`
   }
 `;
 
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 10px auto;
-  width: 80%;
+export const Form = styled(Page)`
   label {
     margin: 10px auto;
     font-size: 18px;
-    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 2px;
     line-height: 23px;
     color: #444;
@@ -490,7 +468,6 @@ export const Form = styled.form`
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 2px;
     line-height: 2;
     :focus {
@@ -504,7 +481,6 @@ export const Form = styled.form`
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 2px;
     line-height: 2;
     :focus {
