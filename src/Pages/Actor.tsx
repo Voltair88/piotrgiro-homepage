@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Bio } from 'Styled';
-import { actorheader } from 'Assets/Pictures';
+import { actorheader } from 'Assets';
 
 export default function Actor() {
   const { t } = useTranslation();

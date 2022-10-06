@@ -1,6 +1,6 @@
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { PiotrGiro1, PiotrGiro2, PiotrGiro3, PiotrGiro4, PiotrGiro5 } from '../Assets/Pictures';
+import { PiotrGiro1, PiotrGiro2, PiotrGiro3, PiotrGiro4, PiotrGiro5 } from '../Assets';
 import 'swiper/css/bundle';
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
