@@ -15,4 +15,7 @@ export const translationsEnglish = {
   Email: 'Email',
   Name: 'Name',
   Message: 'Message',
+  CVHeader1: 'Film & TV',
+  CVHeader2: 'Theater',
+  CVHeader3: 'Dancer',
 };

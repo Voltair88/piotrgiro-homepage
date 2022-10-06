@@ -1,9 +1,11 @@
 import { CeVe } from 'Styled';
+import { useTranslation } from 'react-i18next';
 
 export default function CV() {
+  const { t } = useTranslation();
   return (
     <CeVe>
-      <h2>Film & TV</h2>
+      <h2>{t('CVHeader1')}</h2>
       <div className="container">
         <ul>
           <li>2018 - Dansa Först, Regi - Rikard Svensson </li>
@@ -23,7 +25,7 @@ export default function CV() {
           <li>1999 - The Last Words, Regi - Wim Vandekeybus</li>
         </ul>
       </div>
-      <h2>Teater</h2>
+      <h2>{t('CVHeader2')}</h2>
       <div className="container">
         <ul>
           <li>2017 - Because I’m worth it - Kulturhuset Stadsteatern</li>
@@ -46,7 +48,7 @@ export default function CV() {
           </li>
         </ul>
       </div>
-      <h2>Dansaren</h2>
+      <h2>{t('CVHeader3')}</h2>
       <div className="container">
         <ul>
           <li>2016 - Ina Christel Johannessen - Kulturhuset Stadsteatern</li>

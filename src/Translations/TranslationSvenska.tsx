@@ -15,4 +15,7 @@ export const translationSvenska = {
   Email: 'E-post',
   Name: 'Namn',
   Message: 'Meddelande',
+  CVHeader1: 'Film & TV',
+  CVHeader2: 'Teater',
+  CVHeader3: 'Dansaren',
 };
