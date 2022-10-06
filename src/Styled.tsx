@@ -35,10 +35,13 @@ body:after{
       padding: 10px 10px !important;
     }
     .Logo a {
+      height: 50px;
+      margin: 0;
       padding: 0!important;
     }
-     .Logo-img {
-        width: 50% !important;
+     .Logo > a > p {
+      height: 50px;
+      font-size: 1.5rem;
     }
   }
   .notScrolled {
@@ -162,11 +165,14 @@ export const Hom = styled.div`
     object-fit: cover;
   }
   a h1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     font-family: 'Source Sans Pro', sans-serif;
     height: 50px;
     font-size: 74px;
     text-shadow: 1px 1px 1px #333;
-    padding-left: 4vw;
+    padding-right: 4vw;
   }
   @media (max-width: 768px) {
     .par {
@@ -210,7 +216,7 @@ export const Nav = styled.nav`
   z-index: 999 !important;
 
   a {
-    color: #fff;
+    color: #bbbbbb;
     text-decoration: none;
     height: 20px;
     line-height: 20px;
@@ -229,32 +235,48 @@ export const Nav = styled.nav`
     color: #333;
   }
   .Logo > a {
-    width: 65px;
-    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 75px;
     top: 0;
     left: 0;
     padding: 0;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     position: absolute;
     :hover {
       background: none;
     }
   }
-  .Logo-img {
-    width: 100%;
-    height: auto;
+  .Logo > a > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 75px;
+    font-size: 2.2rem;
+    font-family: 'Libre Caslon Display';
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #ffffff;
     margin: 0;
-    filter: invert(100%);
     transition: all 0.3s ease-in-out;
   }
-  .Logo-img:hover {
+  .Logo > a > p:hover {
     filter: invert(70%);
   }
   @media (max-width: 1000px) {
-    .Logo-img {
-      width: 70%;
-      height: auto;
+    .Logo > a > p {
+      font-size: 1.5rem;
+      width: 65px;
+      height: 60px;
+    }
+    .Logo > a {
+      justify-content: flex-start;
+      margin-top: 5px;
+      width: 65px;
+      height: 50px;
     }
   }
   .flag {
@@ -338,7 +360,7 @@ export const Foot = styled.footer`
   height: 50px;
 
   p {
-    margin: 0;
+    margin: 0 0 0 20px;
     padding: 0;
     font-size: 12px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -428,7 +450,7 @@ export const Bio = styled(Page)`
   }
   p {
     font-size: 1rem;
-    max-width: 1200px;
+    max-width: 800px;
     line-height: 30px;
     margin: 0 5%;
   }
@@ -436,7 +458,8 @@ export const Bio = styled(Page)`
 
 export const Show = styled(Page)`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 10px auto;
