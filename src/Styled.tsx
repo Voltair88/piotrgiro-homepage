@@ -30,18 +30,18 @@ body:after{
     background: #333333e3 !important;
     padding: 0!important;
     height: 50px!important;
-    align-items: center;
+    align-items: center!important;
     a {
       padding: 10px 10px !important;
     }
     .Logo a {
-      height: 50px;
-      margin: 0;
+      height: 50px!important;
+      margin: 0!important;
       padding: 0!important;
     }
      .Logo > a > p {
-      height: 50px;
-      font-size: 1.5rem;
+      height: 50px!important;
+      font-size: 1.5rem!important;
     }
   }
   .notScrolled {
@@ -269,13 +269,14 @@ export const Nav = styled.nav`
   @media (max-width: 1000px) {
     .Logo > a > p {
       font-size: 1.5rem;
-      width: 65px;
+      width: 150px;
       height: 60px;
     }
     .Logo > a {
       justify-content: flex-start;
       margin-top: 5px;
-      width: 65px;
+      margin-left: 10px;
+      width: 150px;
       height: 50px;
     }
   }
