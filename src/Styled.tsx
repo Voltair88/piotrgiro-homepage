@@ -488,3 +488,19 @@ export const Form = styled(Page)`
     }
   }
 `;
+
+export const CeVe = styled(Page)`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 10px 0 0 20%;
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  @media (max-width: 1000px) {
+    margin: 10px auto;
+  }
+`;
