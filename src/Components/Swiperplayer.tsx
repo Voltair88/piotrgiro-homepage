@@ -1,37 +1,16 @@
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { PiotrGiro1, PiotrGiro2, PiotrGiro3, PiotrGiro4, PiotrGiro5 } from '../Assets';
 import 'swiper/css/bundle';
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
-const slides = [
-  {
-    src: PiotrGiro1,
-    title: 'Piotr Giro',
-    alt: 'Slide 1',
-  },
-  {
-    src: PiotrGiro2,
-    title: 'Piotr Giro',
-    alt: 'Slide 2',
-  },
-  {
-    src: PiotrGiro3,
-    title: 'Piotr Giro',
-    alt: 'Slide 3',
-  },
-  {
-    src: PiotrGiro4,
-    title: 'Piotr Giro',
-    alt: 'Slide 4',
-  },
-  {
-    src: PiotrGiro5,
-    title: 'Piotr Giro',
-    alt: 'Slide 5',
-  },
-];
-export default function Home() {
+type Props = {
+  slides: Array<{
+    src: string;
+    title: string;
+    alt: string;
+  }>;
+};
+export default function Home({ slides }: Props) {
   const swiperOptions = {
     slidesPerView: 1,
     spaceBetween: 3,
@@ -41,8 +20,8 @@ export default function Home() {
       delay: 5000,
       disableOnInteraction: false,
     },
-    pagination: { true: '.swiper-pagination' },
-    navigation: {
+    /*     pagination: { true: '.swiper-pagination' },
+     */ navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
@@ -54,7 +33,7 @@ export default function Home() {
         <div className="swiper-button-next"></div>
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <img src={slide.src} alt={slide.alt} fetchpriority="high" className="skeleton" />
+            <img src={slide.src} alt={slide.alt} className="skeleton" />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,3 +1,4 @@
+import { display } from '@mui/system';
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyled = createGlobalStyle`
@@ -72,12 +73,7 @@ body:after{
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
   }
-`;
-
-export const Hom = styled.div`
-  display: flex;
-  flex-direction: column;
-  .swiper-container {
+    .swiper-container {
     padding-top: 2vh;
     width: 70%;
     margin: auto;
@@ -109,16 +105,21 @@ export const Hom = styled.div`
   }
   .swiper-button-next {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath d='M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
-    filter: invert(50%);
-    top: 40%;
+    transition: all 0.5s ease;
+    opacity: 0.1;
+    filter: invert(0.5);
+  }
+  .swiper:hover > .swiper-button-prev, .swiper:hover > .swiper-button-next {
+    opacity: 1;
   }
   .swiper-button-next:after {
     content: '';
   }
   .swiper-button-prev {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath d='M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
-    filter: invert(50%);
-    top: 40%;
+    transition: all 0.5s ease;
+    opacity: 0.1;
+    filter: invert(0.5);
   }
   .swiper-button-prev:after {
     content: '';
@@ -138,6 +139,12 @@ export const Hom = styled.div`
       margin: 0 !important;
     }
   }
+`;
+
+export const Hom = styled.div`
+  display: flex;
+  flex-direction: column;
+
   .sections {
     display: flex;
     flex-direction: column;
@@ -433,27 +440,37 @@ export const Page = styled.div`
   -webkit-font-smoothing: antialiased;
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
 
 export const Bio = styled(Page)`
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    '. .'
+    'Swipercontainer Text'
+    '. .';
+  .Swipercontainer {
+    grid-area: Swipercontainer;
+  }
+  .Text {
+    grid-area: Text;
+  }
   h1 {
     font-size: 60px;
     line-height: 40px;
   }
-  .img {
-    width: 100%;
-    height: 350px;
-    transition: all 0.3s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
   p {
     font-size: 1rem;
     max-width: 800px;
-    line-height: 30px;
-    margin: 0 5%;
+    line-height: 22px;
+  }
+  .swiper {
+    margin: 5px;
+    width: 400px;
+    height: 700px;
   }
 `;
 
