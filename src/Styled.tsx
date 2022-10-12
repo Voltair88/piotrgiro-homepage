@@ -1,4 +1,3 @@
-import { display } from '@mui/system';
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyled = createGlobalStyle`
@@ -457,6 +456,7 @@ export const Bio = styled(Page)`
   }
   .Text {
     grid-area: Text;
+    white-space: pre-line;
   }
   h1 {
     font-size: 60px;
@@ -471,6 +471,9 @@ export const Bio = styled(Page)`
     margin: 5px;
     width: 400px;
     height: 700px;
+  }
+  ul {
+    padding-left: 20px;
   }
 `;
 
