@@ -134,8 +134,8 @@ body:after{
     display: none;
   }
   .modal > .swiper {
-    width: 80%;
-    height: 80%;
+    width: 80%!important;
+    height: 80%!important;
     overflow: hidden;
     position: relative;
   }
