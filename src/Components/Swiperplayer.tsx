@@ -42,6 +42,7 @@ export default function Home({ slides }: Props) {
     modal?.classList.remove('open');
   };
   // clicking on the modal will close the modal
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const clickOutside = (e: any) => {
     const modal = document.querySelector('.modal');
     if (e.target === modal) {
