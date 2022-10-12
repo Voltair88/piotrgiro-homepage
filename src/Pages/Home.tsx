@@ -65,7 +65,7 @@ export default function Home() {
           <NavLink to="/dancer">
             <img src={dance} alt="Dance" className="skeleton" />
             <Parallax className="par" translateY={[-150, 50]}>
-              <h1>{t('Dansaren')}</h1>
+              <h1 className="left">{t('Dansaren')}</h1>
             </Parallax>
           </NavLink>
           <NavLink to="/commercially">
