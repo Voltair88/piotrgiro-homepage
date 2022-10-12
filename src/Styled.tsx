@@ -89,18 +89,8 @@ body:after{
     text-align: center;
     font-size: 1rem;
     background: #fff;
-    border-radius: 0 0 10px 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
   }
   .swiper-button-next {
@@ -146,12 +136,8 @@ body:after{
   .modal > .swiper {
     width: 80%;
     height: 80%;
-    border-radius: 10px;
     overflow: hidden;
     position: relative;
-  }
-  .modal > .swiper > .swiper-slide {
-    background-color: black;
   }
   .modal .swiper .swiper-slide img {
     max-width: 100%;
@@ -171,7 +157,7 @@ body:after{
     align-items: center;
     justify-content: center;
   }
-  .open .swiper {
+  .open {
     width: 100%;
     object-fit: cover;
     background-color: black;
