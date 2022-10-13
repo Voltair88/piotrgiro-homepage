@@ -302,7 +302,7 @@ export const Nav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 180px;
+    width: 200px;
     height: 75px;
     font-size: 2.2rem;
     font-family: 'Libre Caslon Display';
