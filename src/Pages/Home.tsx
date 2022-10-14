@@ -1,17 +1,7 @@
 import { Hom } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import {
-  actor,
-  dance,
-  biografi,
-  kommercielt,
-  PiotrGiro1,
-  PiotrGiro2,
-  PiotrGiro3,
-  PiotrGiro4,
-  PiotrGiro5,
-} from '../Assets';
+import { actor, dance, biografi, kommercielt, PiotrGiro1, PiotrGiro2, PiotrGiro3 } from '../Assets';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -30,16 +20,6 @@ const Landingpage = [
     src: PiotrGiro3,
     title: 'Piotr Giro',
     alt: 'Slide 3',
-  },
-  {
-    src: PiotrGiro4,
-    title: 'Piotr Giro',
-    alt: 'Slide 4',
-  },
-  {
-    src: PiotrGiro5,
-    title: 'Piotr Giro',
-    alt: 'Slide 5',
   },
 ];
 
@@ -71,7 +51,7 @@ export default function Home() {
           <NavLink to="/commercially">
             <img src={kommercielt} alt="commercially" className="skeleton" />
             <Parallax className="par" translateY={[-150, 50]}>
-              <h1>{t('Commercially')}</h1>
+              <h1 className="left">{t('Commercially')}</h1>
             </Parallax>
           </NavLink>
         </div>

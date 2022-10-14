@@ -10,7 +10,7 @@ export const translationSvenska = {
   kommercielt:
     'Piotr har medverkat i musikvideor som Roxette av <i>Jonas Åkerlund</i>, Weeping Willows, Takida m.fl. \n Under tiden med det Belgiska danskompaniet gjorde Piotr ett samarbete med den Japanske modeskaparen <i>Issey Miyake</i> i Milano. \n \n',
   biography:
-    'Piotr Giro är född i södra Polen och kom till Sverige vid 7 års åldern. Han är utbildad på Kungliga Svenska Balettskolan i Stockholm och har varit verksam sedan 1995 som skådespelare & dansare, koreograf och rörelse lärare både i Sverige och utomlands. \n \n Han har arbetat med fria regissörer, koreografer, institutioner, kompanier och fasta ensembler inom, teater, dans, film och tv både i Sverige och utomlands. \n \n Piotr har varit verksam på Dramaten, Stockholms Stadsteater, Unga Klara, Göteborgs Stadsteater, Cirkus Cirkör, Kungliga Operan, Norrlandsoperan, Teater Giljotin m.fl. \n \n Jobbat med regissörer som Susanna Edwards, Suzanne Osten, Daniel Lind Lagerlöf, Simon Kaijser, Katrine Wiedemann, Eva Bergman, Etienne Glaser m.fl. \n \n Han har samarbetat med världskompanier och koreografer som Ultima Vez/Wim Vandekeybus, Batsheva Dance Ensemble, Cullbergbaletten, La La La Human Steps/Édouard Lock, Ohad Naharin, Angelin Preljocaj, Josef Nadj, Örjan Andersson, Fredrik ”Benke” Rydman, Jens Östberg, Helena Franzén, Bogdan & Carina, Ina Christel Johannessen, Hans Marklund m.fl. \n \n',
+    'Piotr Giro är född i södra Polen och kom till Sverige vid 7 års åldern. Han är utbildad på Kungliga Svenska Balettskolan i Stockholm och har varit verksam sedan 1995 som skådespelare & dansare, koreograf och rörelse lärare både i Sverige och utomlands. \n \n Han har arbetat med fria regissörer, koreografer, institutioner, kompanier och fasta ensembler inom, teater, dans, film och tv både i Sverige och utomlands. \n \n Piotr har varit verksam på Dramaten, Stockholms Stadsteater, Unga Klara, Göteborgs Stadsteater, Cirkus Cirkör, Kungliga Operan, Norrlandsoperan, Teater Giljotin m.fl. \n \n Jobbat med regissörer som Susanna Edwards, Suzanne Osten, Daniel Lind Lagerlöf, Simon Kaijser, Katrine Wiedemann, Eva Bergman, Jasenko Selimović, Etienne Glaser, Niklas Hjulström m.fl. \n \n Han har samarbetat med världskompanier och koreografer som Ultima Vez/Wim Vandekeybus, Batsheva Dance Ensemble, Cullbergbaletten, La La La Human Steps/Édouard Lock, Ohad Naharin, Angelin Preljocaj, Josef Nadj, Örjan Andersson, Fredrik ”Benke” Rydman, Jens Östberg, Helena Franzén, Bogdan & Carina, Ina Christel Johannessen, Hans Marklund m.fl. \n \n',
   Actor:
     'Piotr spelade titelrollen i Romeo & Julia på Dramaten tillsammans med Cirkus Cirkörs, spelade titelrollerna i Don Juan och Dantes Gudomliga Komedi på Göteborgs Stadsteater. \n Spelade en av huvudrollerna i film Keillers Park, medverkat i Wellkåmm to Verona, Flickan mamman och demonerna, Mannen Under Trappan, Skeppsholmen m.fl. \n \n Han har varit verksam på Dramaten, Unga Klara, Kulturhuset Stadsteatern, Göteborgs Stadsteater, Teater Giljotin, NorrlandOperan m.fl.',
   Dancer:
@@ -20,7 +20,7 @@ export const translationSvenska = {
   Dancer1: '2019 - koreograferade NK-Galan på Eric Ericsonhallen.',
   Dancer2: '2014 - koreograferade Azerbaijans Eurovision bidrag till artisten Dilara  Kazimova - Start A Fire.',
   Dancer3: '2010 - Koreograferade Pippi Långstrump på Svenska Teatern i Helsingfors.',
-  STkontakta: 'Kontakta Stockholmsgruppen för bokningar: +46 (0)8 5100 1000 \n eller besök ',
+  STkontakta: 'Kontakta mig direkt eller Stockholmsgruppen för bokningar: +46 (0)8 5100 1000 \n eller besök ',
   /* Contact */
   Submit: 'Tack, Jag kommer höra av mig så snart som möjligt!',
   Email: 'E-post',
@@ -59,7 +59,7 @@ export const translationSvenska = {
   Actor22: '2008 - Edvard den Andre - (<i>Spencer</i>) - Unga Klara / Kulturhuset Stadsteatern',
   Actor23: '2006 - Momo eller kampen om tiden - (<i>Gigi</i>) - Kulturhuset / Skärholmen & Cirkus Cirkör',
   Actor24: '2006 - Vagabond av Piotr Giro - Teatergiljotin, gästspel ”Made in Umeå” Festival',
-  Actor25: '2005 - 99% Unknown - Cirkus Cirkör, Gästspel i Belgien - Danmark',
+  Actor25: '2005 - 99% Unknown - Cirkus Cirkör - Sverige, Belgien, Danmark turné',
   Actor26: '2004 - Propaganda - Bortalaget / Jens Östberg - Kulturhuset Stadsteatern',
   Actor27: '2004 - Don Juan av Moliére - (<i>titelrollen</i>) - Göteborgs stadsteater',
   Actor28: '2003 - 2004 - Dantes Gudomliga Komedi - Göteborgs stadsteater',
@@ -86,7 +86,9 @@ export const translationSvenska = {
   Dans19: '1996 - Carl - Olof Berg - Sverige',
   Dans20: '1995 - Kungliga Operan - Operan Aida och Baletten Peer Gynt',
   Commercial1: '2016 - Weeping Willows / My Love Is Not Blind / Regi - David Kaijser',
+  Commercial15: '2016 - Magnus Uggla / Dyngrak(VR) / Regi - Unknown',
   Commercial2: '2015 - Elin Lanto / Burning Heart / Regi - Robin Robinovich ',
+  Commercial25: '2015 - Ikea reklam /Mer plats åt barnen / Regi - Jens Jonsson',
   Commercial3: '2014 - Takida / To Have And To Hold / Regi - Bengt-Anton Runsten',
   Commercial4: '2011 - Elin Lanto / Color Me Blue / Regi - Rafael Edholm ',
   Commercial5: '2006 - Backyard Babies / The Mess Age (How Could I Be So Wrong) Sony Music',
@@ -94,7 +96,7 @@ export const translationSvenska = {
   Commercial7: '1996 - Thomas Di Leva / Den Glada Stjärnan / Regi - Di Leva',
   Commercial8: '1993 - Pandora / Trust Me / Regi - Unknown',
   Skills1: 'Svenska(modersmål), Engelska(flytande) - Polska',
-  Skills2: 'Proffessionell dansar sedan 1995, lär ut workshops i dans och och rörelse',
+  Skills2: 'Proffessionell dansar sedan 1995, ger workshops i dans och rörelse',
   Skills3: 'Tränar kampsport, akrobatik, klättring och Zazen',
   Skills4: 'Längd - 185 cm',
   Skills5: 'Körkort B',

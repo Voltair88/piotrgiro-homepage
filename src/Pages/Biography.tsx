@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Bio } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
-import { biografi, dance } from '../Assets';
+import { biografi, biografi2, biografi3, biografi4, biografi5, biografi6 } from '../Assets';
 
 const slides = [
   {
@@ -10,8 +10,28 @@ const slides = [
     alt: 'Slide 1',
   },
   {
-    src: dance,
-    title: 'Dance',
+    src: biografi2,
+    title: 'Biografi2',
+    alt: 'Slide 2',
+  },
+  {
+    src: biografi3,
+    title: 'Biografi2',
+    alt: 'Slide 2',
+  },
+  {
+    src: biografi4,
+    title: 'Biografi2',
+    alt: 'Slide 2',
+  },
+  {
+    src: biografi5,
+    title: 'Biografi2',
+    alt: 'Slide 2',
+  },
+  {
+    src: biografi6,
+    title: 'Biografi2',
     alt: 'Slide 2',
   },
 ];

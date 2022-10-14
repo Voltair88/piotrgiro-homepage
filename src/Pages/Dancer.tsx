@@ -1,4 +1,4 @@
-import { dance } from 'Assets';
+import { dance, dance2, dance3, dance4, dance5, dance6, dance7, dance8, dance9, dance10 } from 'Assets';
 import { Trans, useTranslation } from 'react-i18next';
 import { Bio } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
@@ -8,6 +8,51 @@ const slides = [
     src: dance,
     title: 'Dance',
     alt: 'Slide 1',
+  },
+  {
+    src: dance2,
+    title: 'Dance2',
+    alt: 'Slide 2',
+  },
+  {
+    src: dance3,
+    title: 'Dance2',
+    alt: 'Slide 2',
+  },
+  {
+    src: dance4,
+    title: 'Dance2',
+    alt: 'Slide 2',
+  },
+  {
+    src: dance5,
+    title: 'Dance2',
+    alt: 'Slide 2',
+  },
+  {
+    src: dance6,
+    title: 'Dance2',
+    alt: 'Slide 2',
+  },
+  {
+    src: dance7,
+    title: 'Dance2',
+    alt: 'Slide 2',
+  },
+  {
+    src: dance10,
+    title: 'Dance2',
+    alt: 'Slide 2',
+  },
+  {
+    src: dance9,
+    title: 'Dance2',
+    alt: 'Slide 2',
+  },
+  {
+    src: dance8,
+    title: 'Dance2',
+    alt: 'Slide 2',
   },
 ];
 export default function Actor() {
