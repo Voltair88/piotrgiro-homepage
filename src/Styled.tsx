@@ -122,6 +122,7 @@ body:after{
   }
   .swiper-slide img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
   .swiper-pagination {
@@ -491,6 +492,7 @@ export const Bio = styled(Page)`
     margin-top: 20px;
     max-width: 80vw;
     max-height: 80vh;
+    width: 100%;
     object-fit: cover;
   }
   .swiper-wrapper {
