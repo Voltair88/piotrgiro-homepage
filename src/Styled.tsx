@@ -74,13 +74,19 @@ body:after{
   }
   .swiper-container {
     padding-top: 2vh;
-    width: 70%;
     margin: auto;
   }
   .swiper {
+    width: 75%;
+    max-width: 120vh;
+    height: 90%;
+    max-height: 80vh;
     display: flex;
     flex-direction: row;
-    cursor: pointer;
+    cursor: grab;
+  }
+  .swiper:active {
+    cursor: grabbing;
   }
   .swiper-slide {
     width: 100%;
@@ -115,8 +121,7 @@ body:after{
     content: '';
   }
   .swiper-slide img{
-    width: 95%;
-    height: 80%;
+    width: 100%;
     object-fit: cover;
   }
   .swiper-pagination {
@@ -139,60 +144,14 @@ body:after{
   }
 
   @media (max-width: 768px) {
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
     .swiper-container {
       width: 100% !important;
       margin: 0 !important;
     }
-  }
-  .modal  {
-    position: fixed;
-    display: none;
-  }
-  .modal > .swiper {
-    width: 80%!important;
-    height: 80%!important;
-    overflow: hidden;
-    position: relative;
-  }
-  .modal .swiper .swiper-slide img {
-    max-width: 100%;
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-  }
-  .open {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .open {
-    width: 100%;
-    object-fit: cover;
-    background-color: black;
-
-  }
-  .close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #fff;
-    background-color: #000;
-    padding: 10px 10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
   }
 `;
 
@@ -529,7 +488,6 @@ export const Bio = styled(Page)`
   }
   .swiper {
     background-color: hsl(0, 0%, 70%, 0.5);
-
     margin-top: 20px;
     max-width: 80vw;
     max-height: 80vh;

@@ -9,13 +9,10 @@ export default function Showreel() {
       <Player src="https://www.youtube.com/embed/Y7-NQL7eQXA" />
       <Player src="https://www.youtube.com/embed/GSzP953UJlM" />
       <Player src="https://www.youtube.com/embed/Cdmumgrb92Y" />
-
       <Player src="https://www.youtube.com/embed/rLLD3WmikJs" />
-
       <Player src="https://www.youtube.com/embed/dK-J5b1MdgY" />
       <Player src="https://www.youtube.com/embed/MSlncHYgIeo" />
       <Player src="https://www.youtube.com/embed/RzCpF4VSQBo" />
-
       <Player src="https://www.youtube.com/embed/MRkMOrh2LBI" />
       <Player src="https://www.youtube.com/embed/lBwA_yJwxho" />
       <Player src="https://www.youtube.com/embed/4IBbn61yC-c" />
