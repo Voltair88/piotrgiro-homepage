@@ -526,6 +526,11 @@ export const Show = styled(Page)`
   align-items: center;
   justify-content: center;
   margin: 10px auto;
+  figure {
+    margin: auto;
+    margin-inline: 20px;
+    padding: 0;
+  }
   iframe {
     margin: 5px auto;
     max-width: 100%;
@@ -536,7 +541,7 @@ export const Show = styled(Page)`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 10px auto;
+    margin: 0 0 10px 0;
     width: 100%;
     max-width: 100%;
   }
