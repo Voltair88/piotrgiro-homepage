@@ -470,7 +470,7 @@ export const Bio = styled(Page)`
     white-space: pre-line;
   }
   h1 {
-    font-family: 'Libre Caslon Display';
+    font-family: 'Libre Caslon Display', sans-serif, serif;
     font-weight: 600;
     font-size: 2.5rem;
     letter-spacing: 2px;
@@ -530,6 +530,15 @@ export const Show = styled(Page)`
     margin: 5px auto;
     max-width: 100%;
     max-height: auto;
+  }
+  caption,
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto;
+    width: 100%;
+    max-width: 100%;
   }
 `;
 
