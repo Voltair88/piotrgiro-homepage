@@ -28,7 +28,7 @@ export const translationsEnglish = {
   Message: 'Message',
   /* CV Headers */
   CVHeader1: 'Film & TV',
-  CVHeader2: 'Theatre and Scene',
+  CVHeader2: 'Theatre & Scene',
   CVHeader3: 'Dance',
   CVHeader4: 'Skills',
   CVHeader5: 'Commercial & Music Videos',

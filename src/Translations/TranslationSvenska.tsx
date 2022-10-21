@@ -28,7 +28,7 @@ export const translationSvenska = {
   Message: 'Meddelande',
   /* CV Headers */
   CVHeader1: 'Film & TV',
-  CVHeader2: 'Teater och Scen',
+  CVHeader2: 'Teater & Scen',
   CVHeader3: 'Dans',
   CVHeader4: 'Övrigt',
   CVHeader5: 'Kommersiellt & Musikvideor',

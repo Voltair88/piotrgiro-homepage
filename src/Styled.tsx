@@ -465,6 +465,7 @@ export const Bio = styled(Page)`
   justify-content: center;
   align-items: center;
   .Swipercontainer {
+    background-color: #c6c6c6;
   }
   .Text {
     white-space: pre-line;
