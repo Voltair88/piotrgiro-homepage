@@ -465,12 +465,13 @@ export const Bio = styled(Page)`
   justify-content: center;
   align-items: center;
   .Swipercontainer {
+    background-color: #c6c6c6;
   }
   .Text {
     white-space: pre-line;
   }
   h1 {
-    font-family: 'Libre Caslon Display';
+    font-family: 'Libre Caslon Display', sans-serif, serif;
     font-weight: 600;
     font-size: 2.5rem;
     letter-spacing: 2px;
@@ -540,16 +541,55 @@ export const Show = styled(Page)`
   align-items: center;
   justify-content: center;
   margin: 10px auto;
+  figure {
+    margin: auto;
+    margin-inline: 20px;
+    padding: 0;
+  }
   iframe {
     margin: 5px auto;
     max-width: 100%;
     max-height: auto;
   }
+  caption,
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+    width: 100%;
+    max-width: 100%;
+  }
 `;
 
 export const Form = styled(Page)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
   label {
-    margin: 10px auto;
+    display: flex;
+    width: 80vw;
+    max-width: 100%;
+    margin: 10px 20px;
     font-size: 18px;
     letter-spacing: 2px;
     line-height: 23px;
@@ -562,8 +602,10 @@ export const Form = styled(Page)`
   input,
   textarea {
     margin: 10px auto;
-    max-width: 900px;
-    width: 100%;
+    display: block;
+    max-width: 100%;
+    margin: 10px 20px;
+    width: 80vw;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -575,6 +617,7 @@ export const Form = styled(Page)`
     }
   }
   button {
+    display: block;
     margin: 10px auto;
     max-width: 900px;
     padding: 10px;

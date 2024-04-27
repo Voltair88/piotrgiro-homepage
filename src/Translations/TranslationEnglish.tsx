@@ -5,7 +5,7 @@ export const translationsEnglish = {
   Dansaren: 'Dancer',
   Kontakt: 'Contact',
   Showreel: 'Showreel',
-  Commercially: 'Commercially',
+  Commercially: 'Commercial',
   /* Text */
   kommercielt:
     'Piotr has appeared in music videos such as Roxette by <i>Jonas Åkerlund</i>, Weeping Willows, Takida and others. \n During the time with the Belgian dance company, Piotr collaborated with the Japanese fashion designer <i>Issey Miyake</i> in Milan. \n \n',
@@ -28,7 +28,7 @@ export const translationsEnglish = {
   Message: 'Message',
   /* CV Headers */
   CVHeader1: 'Film & TV',
-  CVHeader2: 'Theatre and Stage',
+  CVHeader2: 'Theatre & Scene',
   CVHeader3: 'Dance',
   CVHeader4: 'Skills',
   CVHeader5: 'Commercial & Music Videos',

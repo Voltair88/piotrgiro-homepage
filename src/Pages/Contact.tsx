@@ -10,19 +10,21 @@ function ContactForm() {
     return <p className="Submitted">{t('Submit')}</p>;
   }
   return (
-    <Form onSubmit={handleSubmit}>
-      <label htmlFor="email">{t('Email')}</label>
-      <input id="email" type="email" name="email" />
-      <ValidationError prefix="Email" field="email" errors={state.errors} />
-      <label htmlFor="Name">{t('Name')}</label>
-      <input id="name" type="text" name="name" />
-      <ValidationError prefix="Name" field="name" errors={state.errors} />
-      <label htmlFor="message">{t('Message')}</label>
-      <textarea id="message" name="message" />
-      <ValidationError prefix="Message" field="message" errors={state.errors} />
-      <button type="submit" disabled={state.submitting}>
-        Submit
-      </button>
+    <Form>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="email">{t('Email')}</label>
+        <input id="email" type="email" name="email" />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
+        <label htmlFor="Name">{t('Name')}</label>
+        <input id="name" type="text" name="name" />
+        <ValidationError prefix="Name" field="name" errors={state.errors} />
+        <label htmlFor="message">{t('Message')}</label>
+        <textarea id="message" name="message" />
+        <ValidationError prefix="Message" field="message" errors={state.errors} />
+        <button type="submit" disabled={state.submitting}>
+          Submit
+        </button>
+      </form>
     </Form>
   );
 }
