@@ -81,6 +81,7 @@ export default function CV() {
           <li>{t('Dans7')}</li>
           <li>{t('Dans8')}</li>
           <li>{t('Dans9')}</li>
+          <li>{t('Dans95')}</li>
           <li>{t('Dans10')}</li>
           <li>{t('Dans11')}</li>
           <li>{t('Dans12')}</li>
@@ -89,9 +90,11 @@ export default function CV() {
           <li>{t('Dans15')}</li>
           <li>{t('Dans16')}</li>
           <li>{t('Dans17')}</li>
+          <li>{t('Dans175')}</li>
           <li>{t('Dans18')}</li>
           <li>{t('Dans19')}</li>
           <li>{t('Dans20')}</li>
+          <li>{t('Dans21')}</li>
         </ul>
       </div>
       <h2>{t('CVHeader5')}</h2>
@@ -115,6 +118,7 @@ export default function CV() {
           <li>{t('Skills1')}</li>
           <li>{t('Skills2')}</li>
           <li>{t('Skills3')}</li>
+          <li>{t('Skills35')}</li>
           <li>{t('Skills4')}</li>
           <li>{t('Skills5')}</li>
         </ul>

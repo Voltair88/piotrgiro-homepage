@@ -79,8 +79,8 @@ body:after{
   .swiper {
     width: 75%;
     max-width: 120vh;
-    height: 90%;
-    max-height: 80vh;
+    height: 90vh;
+    max-height: 70vh;
     display: flex;
     flex-direction: row;
     cursor: grab;

@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { Bio } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
 import { actor, actor2, actor3, actor4, actor5 } from '../Assets';
@@ -39,7 +39,9 @@ export default function Actor() {
       </div>
       <div className="Text">
         <h1>{t('Skådespelaren')}</h1>
+      <Trans components={{ italic: <i></i> }} t={t}>
         <p>{t('Actor')}</p>
+        </Trans>
       </div>
     </Bio>
   );

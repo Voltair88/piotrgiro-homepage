@@ -1,7 +1,7 @@
 import { Hom } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import { actor, dance, biografi, kommercielt, PiotrGiro1, PiotrGiro2, PiotrGiro3 } from '../Assets';
+import { actor, dance, biografi, kommercielt, PiotrGiro1, PiotrGiro2 } from '../Assets';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -15,11 +15,6 @@ const Landingpage = [
     src: PiotrGiro2,
     title: 'Piotr Giro',
     alt: 'Slide 2',
-  },
-  {
-    src: PiotrGiro3,
-    title: 'Piotr Giro',
-    alt: 'Slide 3',
   },
 ];
 

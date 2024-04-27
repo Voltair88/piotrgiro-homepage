@@ -11,6 +11,7 @@ import {
 import { Trans, useTranslation } from 'react-i18next';
 import { Bio } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
+import { NavLink } from 'react-router-dom';
 const slides = [
   {
     src: kommercielt,
@@ -64,8 +65,12 @@ export default function commercially() {
       <div className="Text">
         <h1>{t('Commercially')}</h1>
         <Trans components={{ italic: <i></i> }}>{t('kommercielt')}</Trans>
-        <Trans t={t}>{t('STkontakta')}</Trans>
-        <a href={'https://stockholmsgruppen.com/contact-us'}>Stockholmsgruppen</a>
+        <Trans t={t}>
+          <p>
+          <NavLink to="/contact">{t('STkontaktaMig')}</NavLink>
+          {t('STkontakta1')}<a href={'https://stockholmsgruppen.com/contact-us'}> {t('STkontakta')}</a> {t('STkontakta2')}
+          </p>
+          </Trans>
       </div>
     </Bio>
   );

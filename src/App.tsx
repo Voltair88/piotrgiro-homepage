@@ -31,7 +31,6 @@ function App() {
             <Route path="/biography" element={<Biography />} />
             <Route path="/actor" element={<Actor />} />
             <Route path="/dancer" element={<Dancer />} />
-            <Route path="/showreel" element={<Showreel />} />
             <Route path="/commercially" element={<Commercially />} />
             <Route path="/CV" element={<CV />} />
             <Route path="/contact" element={<Contact />} />
