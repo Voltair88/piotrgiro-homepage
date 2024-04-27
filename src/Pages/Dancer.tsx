@@ -1,4 +1,4 @@
-import { dance, dance2, dance3, dance4, dance5, dance7, dance10 } from 'Assets';
+import { dance, dance2, dance3, dance4, dance5, dance10 } from 'Assets';
 import { Trans, useTranslation } from 'react-i18next';
 import { Bio } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
