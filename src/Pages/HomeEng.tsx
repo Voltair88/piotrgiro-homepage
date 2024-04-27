@@ -13,6 +13,6 @@ export default function HomeEng() {
     }, []);
 
     return (
-        <Navigate to="/" />
+        <Navigate to="/"/>
     );
 }
