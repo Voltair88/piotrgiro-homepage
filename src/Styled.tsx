@@ -517,6 +517,20 @@ export const Bio = styled(Page)`
   ul {
     padding-left: 20px;
   }
+  @media (max-width: 1000px) {
+    .Swipercontainer {
+      width: 100%;
+    }
+    .swiper {
+      width: 100%;
+      height: 90%;
+      max-height: 80vh;
+    }
+    .swiper-slide img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 `;
 
 export const Show = styled(Page)`
