@@ -3,10 +3,8 @@ import {
   kommercielt2,
   kommercielt3,
   kommercielt4,
-  kommercielt5,
   kommercielt6,
   kommercielt7,
-  kommercielt8,
 } from 'Assets';
 import { Trans, useTranslation } from 'react-i18next';
 import { Bio } from 'Styled';
@@ -34,22 +32,12 @@ const slides = [
     alt: 'Slide 1',
   },
   {
-    src: kommercielt5,
-    title: 'Dance',
-    alt: 'Slide 1',
-  },
-  {
     src: kommercielt6,
     title: 'Dance',
     alt: 'Slide 1',
   },
   {
     src: kommercielt7,
-    title: 'Dance',
-    alt: 'Slide 1',
-  },
-  {
-    src: kommercielt8,
     title: 'Dance',
     alt: 'Slide 1',
   },

@@ -30,11 +30,6 @@ const slides = [
     alt: 'Slide 2',
   },
   {
-    src: dance7,
-    title: 'Dance2',
-    alt: 'Slide 2',
-  },
-  {
     src: dance10,
     title: 'Dance2',
     alt: 'Slide 2',

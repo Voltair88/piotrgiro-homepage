@@ -3,6 +3,8 @@ import { Bio } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
 import { actor, actor2, actor3, actor4, actor5 } from '../Assets';
 
+// actor4 is to be used next to last and new actor 4 to be 3rd
+
 const slides = [
   {
     src: actor,

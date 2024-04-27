@@ -1,4 +1,4 @@
-import { Biography, Contact, Home, Actor, Dancer, Showreel, Commercially, CV } from './Pages/';
+import { Biography, Contact, Home, Actor, Dancer, Commercially, CV, HomeEng } from './Pages/';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './Layout/Footer';
 import Navbar from './Layout/Navbar';
@@ -28,6 +28,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path='/en' element={<HomeEng />} />
             <Route path="/biography" element={<Biography />} />
             <Route path="/actor" element={<Actor />} />
             <Route path="/dancer" element={<Dancer />} />

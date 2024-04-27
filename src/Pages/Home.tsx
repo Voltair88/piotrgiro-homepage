@@ -5,9 +5,13 @@ import { actor, dance, biografi, kommercielt, PiotrGiro1, PiotrGiro2 } from '../
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+// change picture 3 with 1
+
+// PiotrGiro1 biografi2  PiotrGiro3 PiotrGiro4
+
 const Landingpage = [
   {
-    src: PiotrGiro1,
+    src: PiotrGiro1, // change to colors
     title: 'Piotr Giro',
     alt: 'Slide 1',
   },
