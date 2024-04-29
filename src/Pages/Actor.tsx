@@ -1,9 +1,8 @@
 import { Trans, useTranslation } from 'react-i18next';
 import { Bio } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
-import { actor, actor2, actor3, actor4, actor5 } from '../Assets';
+import { actor, actor2, actor3, actor4, actor5, actor6, actor7  } from '../Assets';
 
-// actor4 is to be used next to last and new actor 4 to be 3rd
 
 const slides = [
   {
@@ -17,8 +16,8 @@ const slides = [
     alt: 'Slide 2',
   },
   {
-    src: actor4,
-    title: 'Actor3',
+    src: actor7,
+    title: 'Actor2',
     alt: 'Slide 3',
   },
   {
@@ -26,10 +25,20 @@ const slides = [
     title: 'Actor4',
     alt: 'Slide 4',
   },
+    {
+    src: actor4,
+    title: 'Actor3',
+    alt: 'Slide 5',
+  },
   {
     src: actor5,
     title: 'Actor5',
-    alt: 'Slide 5',
+    alt: 'Slide 6',
+  },
+  {
+    src: actor6,
+    title: 'Actor2',
+    alt: 'Slide 7',
   },
 ];
 export default function Actor() {

@@ -1,5 +1,5 @@
 import { Biography, Contact, Home, Actor, Dancer, Commercially, CV, HomeEng } from './Pages/';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Footer from './Layout/Footer';
 import Navbar from './Layout/Navbar';
 import { GlobalStyled } from 'Styled';
@@ -35,6 +35,7 @@ function App() {
             <Route path="/commercially" element={<Commercially />} />
             <Route path="/CV" element={<CV />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
           <Footer />
         </BrowserRouter>
