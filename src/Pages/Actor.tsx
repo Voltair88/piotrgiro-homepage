@@ -1,7 +1,7 @@
 import { Trans, useTranslation } from 'react-i18next';
 import { Bio } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
-import { actor, actor2, actor3, actor4, actor5, actor6, actor7  } from '../Assets';
+import { actor, actor2, actor3, actor4, actor5, actor7  } from '../Assets';
 
 
 const slides = [

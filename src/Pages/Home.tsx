@@ -1,7 +1,6 @@
 import { Hom } from 'Styled';
-import Swiperplayer from '../Components/Swiperplayer';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import { actor, dance, biografi, kommercielt, PiotrGiro1, PiotrGiro2, PiotrGiro3, biografi2 } from '../Assets';
+import { actor, dance, biografi, kommercielt } from '../Assets';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Bio } from 'Styled';
 import Swiperplayer from '../Components/Swiperplayer';
 import { biografi, biografi2,biografi3,
-  biografi4,biografi5,biografi6,} from '../Assets';
+  biografi5,biografi6,} from '../Assets';
 
 const slides = [
   {
