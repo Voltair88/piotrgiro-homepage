@@ -1,19 +1,32 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import Languageselector from './Languageselector';
+import { useLanguage } from './LanguageWrapper';
 
-export default function Links() {
+interface LinksProps {
+  onLinkClick?: () => void;
+}
+
+export default function Links({ onLinkClick }: LinksProps) {
   const { t } = useTranslation();
+  const { getLocalizedPath } = useLanguage();
+
+  const handleLinkClick = () => {
+    if (onLinkClick) {
+      onLinkClick();
+    }
+  };
 
   return (
     <>
-      <NavLink to="/biography">{t('Biografi')}</NavLink>
-      <NavLink to="/actor">{t('Skådespelaren')}</NavLink>
-      <NavLink to="/dancer">{t('Dansaren')}</NavLink>
-      <NavLink to="/commercially">{t('Commercially')}</NavLink>
-      <NavLink to="/CV">CV</NavLink>
-      <NavLink to="/contact">{t('Kontakt')}</NavLink>
-      <Languageselector />
+      <NavLink to={getLocalizedPath('biography')} onClick={handleLinkClick}>{t('Biografi')}</NavLink>
+      <NavLink to={getLocalizedPath('actor')} onClick={handleLinkClick}>{t('Skådespelaren')}</NavLink>
+      <NavLink to={getLocalizedPath('dancer')} onClick={handleLinkClick}>{t('Dansaren')}</NavLink>
+      <NavLink to={getLocalizedPath('commercially')} onClick={handleLinkClick}>{t('Commercially')}</NavLink>
+      <NavLink to={getLocalizedPath('CV')} onClick={handleLinkClick}>CV</NavLink>
+      <NavLink to={getLocalizedPath('archive')} onClick={handleLinkClick}>{t('Archive')}</NavLink>
+      <NavLink to={getLocalizedPath('contact')} onClick={handleLinkClick}>{t('Kontakt')}</NavLink>
+      <Languageselector onLanguageChange={onLinkClick} />
     </>
   );
 }

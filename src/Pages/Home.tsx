@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 // PiotrGiro1 biografi2  PiotrGiro3 PiotrGiro4
 
-const Landingpage = [
+/* const Landingpage = [
   {
     src: PiotrGiro1,
     title: 'Piotr Giro',
@@ -30,14 +30,14 @@ const Landingpage = [
     title: 'Piotr Giro',
     alt: 'Slide 2',
   },
-];
+]; */
 
 export default function Home() {
   const { t } = useTranslation();
   return (
     <Hom>
       <ParallaxProvider>
-        <Swiperplayer slides={Landingpage} />
+        {/* <Swiperplayer slides={Landingpage} /> */}
         <div className="sections">
           <NavLink to="/biography">
             <img src={biografi} alt="Biografy" className="skeleton" />

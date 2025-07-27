@@ -35,11 +35,11 @@ const slides = [
     title: 'Actor5',
     alt: 'Slide 6',
   },
-  {
+/*   {
     src: actor6,
     title: 'Actor2',
     alt: 'Slide 7',
-  },
+  }, */
 ];
 export default function Actor() {
   const { t } = useTranslation();

@@ -1,17 +1,49 @@
 import React from 'react';
-import i18n from 'i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-export default function Languageselector() {
-  const onChange = (lang: string) => {
-    i18n.changeLanguage(lang);
+interface LanguageselectorProps {
+  onLanguageChange?: () => void;
+}
+
+export default function Languageselector({ onLanguageChange }: LanguageselectorProps) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const switchToSwedish = () => {
+    let newPath = location.pathname;
+    
+    // If currently on English route, remove /en prefix
+    if (newPath.startsWith('/en')) {
+      newPath = newPath.replace('/en', '') || '/';
+    }
+    
+    navigate(newPath);
+    if (onLanguageChange) {
+      onLanguageChange();
+    }
   };
+
+  const switchToEnglish = () => {
+    let newPath = location.pathname;
+    
+    // If currently on Swedish route, add /en prefix
+    if (!newPath.startsWith('/en')) {
+      newPath = newPath === '/' ? '/en' : `/en${newPath}`;
+    }
+    
+    navigate(newPath);
+    if (onLanguageChange) {
+      onLanguageChange();
+    }
+  };
+
   return (
     <div className="languageselector">
-      <button onClick={() => onChange('sv')} className="flag">
+      <button onClick={switchToSwedish} className="flag">
         <p>Sve</p>
       </button>
       <p>/</p>
-      <button onClick={() => onChange('en')} className="flag">
+      <button onClick={switchToEnglish} className="flag">
         <p>Eng</p>
       </button>
     </div>

@@ -20,11 +20,11 @@ const slides = [
     title: 'Biografi3',
     alt: 'Slide 3',
   },
-  {
+/*   {
     src: biografi4,
     title: 'Biografi4',
     alt: 'Slide 4',
-  },
+  }, */
   {
     src: biografi5,
     title: 'Biografi5',

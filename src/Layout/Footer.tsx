@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <Foot>
       <p>
-        <a href="https://www.mattiasgulec.com">Website by Mattias Gulec</a>
+        <a href="https://www.mattiasgulec.com">©Website by Mattias Gulec 2025©</a>
       </p>
 
       <a href="https://www.instagram.com/piotrgiro/" target="_blank" rel="noreferrer" className="insta">

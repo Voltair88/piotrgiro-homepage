@@ -6,6 +6,7 @@ export const translationSvenska = {
   Kontakt: 'Kontakt',
   Showreel: 'Showreel',
   Commercially: 'Kommersiellt',
+  Archive: 'Arkiv',
   /* Text */
   kommercielt:
     'Piotr har medverkat i musikvideor bland annat i <i>Roxette av Jonas Åkerlund, Weeping Willows, Takida, Magnus Uggla</i> \n',
@@ -29,6 +30,9 @@ export const translationSvenska = {
   Email: 'E-post',
   Name: 'Namn',
   Message: 'Meddelande',
+  /* Archive */
+  ArchiveDescription: 'En samling minnesvärda ögonblick och bilder från föreställningar, produktioner och konstnärliga samarbeten.',
+  ViewFullSize: 'Visa i fullstorlek',
   /* CV Headers */
   CVHeader1: 'Film & TV',
   CVHeader2: 'Teater & Scen',
