@@ -1,8 +1,11 @@
-import { Biography, Contact, Home, Actor, Dancer, Commercially, CV, Archive } from './Pages/';
+import { Biography, Contact, Home, Actor, Dancer, CV } from './Pages/';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Footer from './Layout/Footer';
-import Navbar from './Layout/Navbar';
 import LanguageWrapper from './Components/LanguageWrapper';
+import LanguageDetector from './Components/LanguageDetector';
+import FloatingHamburgerMenu from './Components/FloatingHamburgerMenu';
+import FloatingLogo from './Components/FloatingLogo';
+import ScrollToTop from './Components/ScrollToTop';
 import { GlobalStyled } from 'Styled';
 import { Suspense } from 'react';
 import i18n from 'i18next';
@@ -26,27 +29,28 @@ function App() {
       <div className="App">
         <GlobalStyled />
         <BrowserRouter>
+          <ScrollToTop />
           <LanguageWrapper>
-            <Navbar />
+            <FloatingHamburgerMenu />
+            <FloatingLogo />
             <Routes>
+              {/* Language detection route */}
+              <Route path="/" element={<LanguageDetector />} />
+              
               {/* Swedish routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/biography" element={<Biography />} />
-              <Route path="/actor" element={<Actor />} />
-              <Route path="/dancer" element={<Dancer />} />
-              <Route path="/commercially" element={<Commercially />} />
-              <Route path="/CV" element={<CV />} />
-              <Route path="/archive" element={<Archive />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/sv" element={<Home />} />
+              <Route path="/sv/biography" element={<Biography />} />
+              <Route path="/sv/actor" element={<Actor />} />
+              <Route path="/sv/dancer" element={<Dancer />} />
+              <Route path="/sv/CV" element={<CV />} />
+              <Route path="/sv/contact" element={<Contact />} />
               
               {/* English routes */}
               <Route path="/en" element={<Home />} />
               <Route path="/en/biography" element={<Biography />} />
               <Route path="/en/actor" element={<Actor />} />
               <Route path="/en/dancer" element={<Dancer />} />
-              <Route path="/en/commercially" element={<Commercially />} />
               <Route path="/en/cv" element={<CV />} />
-              <Route path="/en/archive" element={<Archive />} />
               <Route path="/en/contact" element={<Contact />} />
               
               {/* Fallback routes */}

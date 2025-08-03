@@ -1,8 +1,9 @@
 import { Hom } from 'Styled';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import { actor, dance, biografi, kommercielt } from '../Assets';
+import { actor, dance, biografi } from '../Assets';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../Components/LanguageWrapper';
 
 // change picture 3 with 1
 
@@ -33,33 +34,29 @@ import { useTranslation } from 'react-i18next';
 
 export default function Home() {
   const { t } = useTranslation();
+  const { getLocalizedPath } = useLanguage();
+  
   return (
     <Hom>
       <ParallaxProvider>
         {/* <Swiperplayer slides={Landingpage} /> */}
         <div className="sections">
-          <NavLink to="/biography">
+          <NavLink to={getLocalizedPath('biography')}>
             <img src={biografi} alt="Biografy" className="skeleton" />
             <Parallax className="par" speed={40} translateY={[-150, 50]}>
               <h1>{t('Biografi')}</h1>
             </Parallax>
           </NavLink>
-          <NavLink to="/Actor">
+          <NavLink to={getLocalizedPath('actor')}>
             <img src={actor} alt="Actor" className="skeleton" />
             <Parallax className="par" translateY={[-150, 50]}>
               <h1>{t('Skådespelaren')}</h1>
             </Parallax>
           </NavLink>
-          <NavLink to="/dancer">
+          <NavLink to={getLocalizedPath('dancer')}>
             <img src={dance} alt="Dance" className="skeleton" />
             <Parallax className="par" translateY={[-150, 50]}>
               <h1 className="left">{t('Dansaren')}</h1>
-            </Parallax>
-          </NavLink>
-          <NavLink to="/commercially">
-            <img src={kommercielt} alt="commercially" className="skeleton" />
-            <Parallax className="par" translateY={[-150, 50]}>
-              <h1 className="left">{t('Commercially')}</h1>
             </Parallax>
           </NavLink>
         </div>

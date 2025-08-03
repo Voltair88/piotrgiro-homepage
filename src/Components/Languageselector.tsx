@@ -12,9 +12,14 @@ export default function Languageselector({ onLanguageChange }: LanguageselectorP
   const switchToSwedish = () => {
     let newPath = location.pathname;
     
-    // If currently on English route, remove /en prefix
+    // If currently on English route, replace /en with /sv
     if (newPath.startsWith('/en')) {
-      newPath = newPath.replace('/en', '') || '/';
+      newPath = newPath.replace('/en', '/sv');
+    } else if (newPath === '/') {
+      newPath = '/sv';
+    } else if (!newPath.startsWith('/sv')) {
+      // Handle any other paths by prefixing with /sv
+      newPath = `/sv${newPath}`;
     }
     
     navigate(newPath);
@@ -26,9 +31,14 @@ export default function Languageselector({ onLanguageChange }: LanguageselectorP
   const switchToEnglish = () => {
     let newPath = location.pathname;
     
-    // If currently on Swedish route, add /en prefix
-    if (!newPath.startsWith('/en')) {
-      newPath = newPath === '/' ? '/en' : `/en${newPath}`;
+    // If currently on Swedish route, replace /sv with /en
+    if (newPath.startsWith('/sv')) {
+      newPath = newPath.replace('/sv', '/en');
+    } else if (newPath === '/') {
+      newPath = '/en';
+    } else if (!newPath.startsWith('/en')) {
+      // Handle any other paths by prefixing with /en
+      newPath = `/en${newPath}`;
     }
     
     navigate(newPath);

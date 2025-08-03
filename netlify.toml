@@ -3,6 +3,7 @@
   [headers.values]
   cache-control = "public, max-age=31536000"
 
+# Legacy URL redirects to maintain SEO
 [[redirects]]
   from = "/en/nu/"
   to = "/en"
@@ -11,9 +12,58 @@
 
 [[redirects]]
   from = "/biografi-pa-svenska/"
-  to = "/biography"
+  to = "/sv/biography"
   status = 301
   force = true
+
+# Redirect old Swedish routes (without /sv prefix) to new structure
+[[redirects]]
+  from = "/biography"
+  to = "/sv/biography"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/actor"
+  to = "/sv/actor"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dancer"
+  to = "/sv/dancer"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercially"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/CV"
+  to = "/sv/CV"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/archive"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/sv/contact"
+  status = 301
+  force = true
+
+# Handle Swedish routes - redirect to index.html for client-side routing
+[[redirects]]
+  from = "/sv/*"
+  to = "/index.html"
+  status = 200
 
 # Handle English routes - redirect to index.html for client-side routing
 [[redirects]]
@@ -21,7 +71,7 @@
   to = "/index.html"
   status = 200
 
-# Handle all other routes - redirect to index.html for client-side routing
+# Handle root and all other routes - redirect to index.html for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"

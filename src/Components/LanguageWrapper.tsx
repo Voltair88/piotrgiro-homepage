@@ -21,13 +21,29 @@ interface LanguageWrapperProps {
 export default function LanguageWrapper({ children }: LanguageWrapperProps) {
   const location = useLocation();
   const isEnglish = location.pathname.startsWith('/en');
+  const isSwedish = location.pathname.startsWith('/sv');
 
   useEffect(() => {
-    const language = isEnglish ? 'en' : 'sv';
+    let language = 'sv'; // default
+    
+    if (isEnglish) {
+      language = 'en';
+    } else if (isSwedish) {
+      language = 'sv';
+    }
+    
+    // Only save language preference if user has explicitly navigated to a language route
+    // and it's different from the current saved preference (to avoid overwriting detection)
+    const currentSavedLanguage = localStorage.getItem('preferred-language');
+    if ((isEnglish || isSwedish) && currentSavedLanguage !== language) {
+      // Only update if this seems like an intentional language change
+      localStorage.setItem('preferred-language', language);
+    }
+    
     if (i18n.language !== language) {
       i18n.changeLanguage(language);
     }
-  }, [isEnglish]);
+  }, [isEnglish, isSwedish]);
 
   const getLocalizedPath = (path: string): string => {
     // Remove leading slash for consistency
@@ -36,7 +52,7 @@ export default function LanguageWrapper({ children }: LanguageWrapperProps) {
     if (isEnglish) {
       return `/en/${cleanPath}`;
     }
-    return `/${cleanPath}`;
+    return `/sv/${cleanPath}`;
   };
 
   const contextValue: LanguageContextType = {
