@@ -8,6 +8,7 @@ export default function CV() {
       <h2>{t('CVHeader1')}</h2>
       <div className="container">
         <ul>
+          <li>{t('Actor0')}</li>
           <li>{t('Actor1')}</li>
           <li>{t('Actor2')}</li>
           <li>{t('Actor3')}</li>

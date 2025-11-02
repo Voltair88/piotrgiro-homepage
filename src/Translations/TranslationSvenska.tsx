@@ -57,7 +57,8 @@ export const translationSvenska = {
   Actor15: '2001 - Mantra / Svt drama / Regi - Jörgen Hjerdt',
   Actor16: '2000 - Inasmuch / Ultima Vez & Quasi Modo / Regi - Wim Vandekeybus',
   Actor17: '1999 - The Last Words / Ultima Vez & Flemish Film / Regi - Wim Vandekeybus',
-  Actor18: '2017 - Because I’m worth it - (<i>Mannen i paret</i>) - Kulturhuset Stadsteatern',
+  Actor0: '2025 - Cornelius / Kortfilm / Regi - Linus Lundgren',
+  Actor18: '2017 - Because I\'m worth it - (<i>Mannen i paret</i>) - Kulturhuset Stadsteatern',
   Actor19:
     '2015 - 2017 - Katastrof i djungeln - (<i>Nikos Skalkottas</i>) - Musikaliska i Stockholm, Atalante i Göteborg',
   Actor20: '2010 - Eaten by Men av Reich + Szyber - Nantes, Frankrike',
