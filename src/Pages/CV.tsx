@@ -97,21 +97,6 @@ export default function CV() {
           <li>{t('Dans21')}</li>
         </ul>
       </div>
-      <h2>{t('CVHeader5')}</h2>
-      <div className="container">
-        <ul>
-          <li>{t('Commercial15')}</li>
-          <li>{t('Commercial1')}</li>
-          <li>{t('Commercial2')}</li>
-          <li>{t('Commercial25')}</li>
-          <li>{t('Commercial3')}</li>
-          <li>{t('Commercial4')}</li>
-          <li>{t('Commercial5')}</li>
-          <li>{t('Commercial6')}</li>
-          <li>{t('Commercial7')}</li>
-          <li>{t('Commercial8')}</li>
-        </ul>
-      </div>
       <h2>{t('CVHeader4')}</h2>
       <div className="container">
         <ul>
