@@ -687,4 +687,213 @@ export const ArchiveGrid = styled(Page)`
       gap: 10px;
     }
   }
+
+  /* Lightbox Styles */
+  .lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .lightbox-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 2001;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  }
+
+  .image-counter {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .lightbox-close {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: #333;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background: white;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .lightbox-zoom-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2001;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+  }
+
+  .zoom-button {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: white;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .lightbox-swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper-zoom-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 90vw;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        cursor: zoom-in;
+      }
+    }
+
+/*     .swiper-button-next {
+      background: rgba(0, 0, 0, 0.5);
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath d='M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      opacity: 1 !important;
+      transition: all 0.3s ease;
+
+      &::after {
+        content: '';
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.8);
+        transform: scale(1.1);
+      }
+    } */
+
+/*     .swiper-button-prev {
+      background: rgba(0, 0, 0, 0.5);
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath d='M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      opacity: 1 !important;
+      transition: all 0.3s ease;
+
+      &::after {
+        content: '';
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.8);
+        transform: scale(1.1);
+      }
+    } */
+  }
+
+  @media (max-width: 768px) {
+    .lightbox-header {
+      padding: 15px;
+    }
+
+    .image-counter {
+      font-size: 16px;
+    }
+
+    .lightbox-close {
+      width: 40px;
+      height: 40px;
+      font-size: 30px;
+    }
+
+    .lightbox-zoom-controls {
+      bottom: 20px;
+    }
+
+    .zoom-button {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+
+    .lightbox-swiper {
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+
+        &::after {
+          font-size: 20px;
+        }
+      }
+    }
+  }
 `;
