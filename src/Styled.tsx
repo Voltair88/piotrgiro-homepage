@@ -782,13 +782,18 @@ export const ArchiveGrid = styled(Page)`
     padding: 0;
     transition: all 0.3s ease;
 
-    &:hover {
+    &:hover:not(:disabled) {
       background: white;
       transform: scale(1.1);
     }
 
-    &:active {
+    &:active:not(:disabled) {
       transform: scale(0.95);
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
     }
   }
 

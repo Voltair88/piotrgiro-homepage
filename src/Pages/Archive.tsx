@@ -55,27 +55,71 @@ export default function Archive() {
   const { t } = useTranslation();
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [zoomLevel, setZoomLevel] = useState(1);
   const swiperRef = useRef<{ swiper: SwiperCore } | null>(null);
 
   const openModal = (index: number) => {
     setSelectedImageIndex(index);
     setCurrentSlide(index);
+    setZoomLevel(1);
   };
 
   const closeModal = () => {
     setSelectedImageIndex(null);
-    // Reset zoom when closing
-    if (swiperRef.current?.swiper?.zoom) {
-      swiperRef.current.swiper.zoom.out();
-    }
+    setZoomLevel(1);
   };
 
   const handleZoomIn = () => {
-    swiperRef.current?.swiper?.zoom.in();
+    const swiper = swiperRef.current?.swiper;
+    if (!swiper) return;
+
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const zoomContainer = activeSlide?.querySelector('.swiper-zoom-container') as HTMLElement;
+    const img = zoomContainer?.querySelector('img') as HTMLElement;
+
+    if (!img || !zoomContainer) return;
+
+    let newScale = 1;
+    if (zoomLevel === 1) {
+      newScale = 2;
+      setZoomLevel(2);
+    } else if (zoomLevel === 2) {
+      newScale = 3;
+      setZoomLevel(3);
+    }
+
+    if (newScale > 1) {
+      zoomContainer.style.transform = `translate3d(0, 0, 0) scale(${newScale})`;
+      zoomContainer.style.transition = 'transform 0.3s';
+      img.style.cursor = 'move';
+    }
   };
 
   const handleZoomOut = () => {
-    swiperRef.current?.swiper?.zoom.out();
+    const swiper = swiperRef.current?.swiper;
+    if (!swiper) return;
+
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const zoomContainer = activeSlide?.querySelector('.swiper-zoom-container') as HTMLElement;
+    const img = zoomContainer?.querySelector('img') as HTMLElement;
+
+    if (!img || !zoomContainer) return;
+
+    let newScale = 1;
+    if (zoomLevel === 3) {
+      newScale = 2;
+      setZoomLevel(2);
+    } else if (zoomLevel === 2) {
+      newScale = 1;
+      setZoomLevel(1);
+    }
+
+    zoomContainer.style.transform = `translate3d(0, 0, 0) scale(${newScale})`;
+    zoomContainer.style.transition = 'transform 0.3s';
+
+    if (newScale === 1) {
+      img.style.cursor = 'zoom-in';
+    }
   };
 
   return (
@@ -122,6 +166,7 @@ export default function Archive() {
             <button
               className="zoom-button"
               onClick={handleZoomIn}
+              disabled={zoomLevel === 3}
               aria-label="Zoom in"
             >
               +
@@ -129,6 +174,7 @@ export default function Archive() {
             <button
               className="zoom-button"
               onClick={handleZoomOut}
+              disabled={zoomLevel === 1}
               aria-label="Zoom out"
             >
               −
@@ -139,14 +185,22 @@ export default function Archive() {
             ref={swiperRef}
             modules={[Zoom, Navigation, Keyboard]}
             initialSlide={selectedImageIndex}
-            zoom={{ maxRatio: 3, toggle: true }}
+            zoom={{ maxRatio: 3, toggle: false }}
             navigation={{
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
             }}
             keyboard={{ enabled: true }}
             loop={true}
-            onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
+            onSlideChange={(swiper) => {
+              setCurrentSlide(swiper.realIndex);
+              setZoomLevel(1);
+              const activeSlide = swiper.slides[swiper.activeIndex];
+              const zoomContainer = activeSlide?.querySelector('.swiper-zoom-container') as HTMLElement;
+              if (zoomContainer) {
+                zoomContainer.style.transform = 'translate3d(0, 0, 0) scale(1)';
+              }
+            }}
             className="lightbox-swiper"
           >
             <div className="swiper-button-prev"></div>
