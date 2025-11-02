@@ -1,6 +1,6 @@
 import { Hom } from 'Styled';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import { actor, dance, biografi } from '../Assets';
+import { PiotrGiro2, dance, biografi, arkiv6 } from '../Assets';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../Components/LanguageWrapper';
@@ -48,7 +48,7 @@ export default function Home() {
             </Parallax>
           </NavLink>
           <NavLink to={getLocalizedPath('actor')}>
-            <img src={actor} alt="Actor" className="skeleton" />
+            <img src={PiotrGiro2} alt="Actor" className="skeleton" />
             <Parallax className="par" translateY={[-150, 50]}>
               <h1>{t('Skådespelaren')}</h1>
             </Parallax>
@@ -57,6 +57,12 @@ export default function Home() {
             <img src={dance} alt="Dance" className="skeleton" />
             <Parallax className="par" translateY={[-150, 50]}>
               <h1 className="left">{t('Dansaren')}</h1>
+            </Parallax>
+          </NavLink>
+          <NavLink to={getLocalizedPath('archive')}>
+            <img src={arkiv6} alt="Archive" className="skeleton" />
+            <Parallax className="par" translateY={[-150, 50]}>
+              <h1 className="dark-text">{t('Archive')}</h1>
             </Parallax>
           </NavLink>
         </div>

@@ -22,6 +22,7 @@ export default function Links({ onLinkClick }: LinksProps) {
       <NavLink to={getLocalizedPath('biography')} onClick={handleLinkClick}>{t('Biografi')}</NavLink>
       <NavLink to={getLocalizedPath('actor')} onClick={handleLinkClick}>{t('Skådespelaren')}</NavLink>
       <NavLink to={getLocalizedPath('dancer')} onClick={handleLinkClick}>{t('Dansaren')}</NavLink>
+      <NavLink to={getLocalizedPath('archive')} onClick={handleLinkClick}>{t('Archive')}</NavLink>
       <NavLink to={getLocalizedPath('CV')} onClick={handleLinkClick}>CV</NavLink>
       <NavLink to={getLocalizedPath('contact')} onClick={handleLinkClick}>{t('Kontakt')}</NavLink>
       <Languageselector onLanguageChange={onLinkClick} />

@@ -1,4 +1,4 @@
-import { Biography, Contact, Home, Actor, Dancer, CV } from './Pages/';
+import { Biography, Contact, Home, Actor, Dancer, CV, Archive } from './Pages/';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Footer from './Layout/Footer';
 import LanguageWrapper from './Components/LanguageWrapper';
@@ -43,6 +43,7 @@ function App() {
               <Route path="/sv/actor" element={<Actor />} />
               <Route path="/sv/dancer" element={<Dancer />} />
               <Route path="/sv/CV" element={<CV />} />
+              <Route path="/sv/archive" element={<Archive />} />
               <Route path="/sv/contact" element={<Contact />} />
               
               {/* English routes */}
@@ -51,6 +52,7 @@ function App() {
               <Route path="/en/actor" element={<Actor />} />
               <Route path="/en/dancer" element={<Dancer />} />
               <Route path="/en/cv" element={<CV />} />
+              <Route path="/en/archive" element={<Archive />} />
               <Route path="/en/contact" element={<Contact />} />
               
               {/* Fallback routes */}

@@ -1,38 +1,53 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArchiveGrid } from 'Styled';
+import { arkiv1, arkiv2, arkiv3, arkiv4, arkiv5, arkiv6, arkiv7, arkiv8, arkiv9 } from '../Assets';
 
-// Placeholder images - these should be replaced with actual archive images
 const archiveImages = [
   {
-    src: '/placeholder1.webp',
+    src: arkiv1,
     title: 'Archive Image 1',
     alt: 'Archive Photo 1',
   },
   {
-    src: '/placeholder2.webp',
+    src: arkiv2,
     title: 'Archive Image 2',
     alt: 'Archive Photo 2',
   },
-  {
-    src: '/placeholder3.webp',
+/*   {
+    src: arkiv3,
     title: 'Archive Image 3',
     alt: 'Archive Photo 3',
-  },
+  }, */
   {
-    src: '/placeholder4.webp',
+    src: arkiv4,
     title: 'Archive Image 4',
     alt: 'Archive Photo 4',
   },
   {
-    src: '/placeholder5.webp',
+    src: arkiv5,
     title: 'Archive Image 5',
     alt: 'Archive Photo 5',
   },
   {
-    src: '/placeholder6.webp',
+    src: arkiv6,
     title: 'Archive Image 6',
     alt: 'Archive Photo 6',
+  },
+  {
+    src: arkiv7,
+    title: 'Archive Image 7',
+    alt: 'Archive Photo 7',
+  },
+  {
+    src: arkiv8,
+    title: 'Archive Image 8',
+    alt: 'Archive Photo 8',
+  },
+  {
+    src: arkiv9,
+    title: 'Archive Image 9',
+    alt: 'Archive Photo 9',
   },
 ];
 
@@ -64,7 +79,6 @@ export default function Archive() {
     <ArchiveGrid>
       <div className="archive-header">
         <h1>{t('Archive')}</h1>
-        <p>{t('ArchiveDescription')}</p>
       </div>
       
       <div className="archive-grid">

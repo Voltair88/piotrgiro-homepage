@@ -21,6 +21,15 @@ import biografi3 from './biografi3.webp';
 import biografi4 from './biografi4.webp';
 import biografi5 from './biografi5.webp';
 import biografi6 from './biografi6.webp';
+import arkiv1 from './arkiv1.webp';
+import arkiv2 from './arkiv2.webp';
+import arkiv3 from './arkiv3.webp';
+import arkiv4 from './arkiv4.webp';
+import arkiv5 from './arkiv5.webp';
+import arkiv6 from './arkiv6.webp';
+import arkiv7 from './arkiv7.webp';
+import arkiv8 from './arkiv8.webp';
+import arkiv9 from './arkiv9.webp';
 import kommercielt from './kommercielt.webp';
 import kommercielt2 from './kommercielt2.webp';
 import kommercielt3 from './kommercielt3.webp';
@@ -54,6 +63,15 @@ export {
   biografi4,
   biografi5,
   biografi6,
+  arkiv1,
+  arkiv2,
+  arkiv3,
+  arkiv4,
+  arkiv5,
+  arkiv6,
+  arkiv7,
+  arkiv8,
+  arkiv9,
   kommercielt,
   kommercielt2,
   kommercielt3,

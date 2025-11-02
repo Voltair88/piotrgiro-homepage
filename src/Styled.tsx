@@ -172,6 +172,10 @@ export const Hom = styled.div`
   a h1:not(.left) {
     justify-content: flex-end;
   }
+  a h1.dark-text {
+    color: #000;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  }
   @media (max-width: 768px) {
     .par {
       transform: translateY(0) !important;
@@ -612,10 +616,12 @@ export const ArchiveGrid = styled(Page)`
     position: relative;
     max-width: 90vw;
     max-height: 90vh;
-    
+
     img {
-      width: 100%;
-      height: 100%;
+      max-width: 90vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
       object-fit: contain;
       border-radius: 8px;
     }
