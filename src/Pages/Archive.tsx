@@ -56,17 +56,31 @@ export default function Archive() {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [zoomLevel, setZoomLevel] = useState(1);
+  const [dragState, setDragState] = useState({ x: 0, y: 0, isDragging: false, startX: 0, startY: 0 });
   const swiperRef = useRef<{ swiper: SwiperCore } | null>(null);
 
   const openModal = (index: number) => {
     setSelectedImageIndex(index);
     setCurrentSlide(index);
     setZoomLevel(1);
+    setDragState({ x: 0, y: 0, isDragging: false, startX: 0, startY: 0 });
   };
 
   const closeModal = () => {
     setSelectedImageIndex(null);
     setZoomLevel(1);
+    setDragState({ x: 0, y: 0, isDragging: false, startX: 0, startY: 0 });
+
+    // Reset all zoom containers
+    const swiper = swiperRef.current?.swiper;
+    if (swiper) {
+      swiper.slides.forEach((slide) => {
+        const zoomContainer = slide?.querySelector('.swiper-zoom-container') as HTMLElement;
+        if (zoomContainer) {
+          zoomContainer.style.transform = 'translate3d(0, 0, 0) scale(1)';
+        }
+      });
+    }
   };
 
   const handleZoomIn = () => {
@@ -75,9 +89,8 @@ export default function Archive() {
 
     const activeSlide = swiper.slides[swiper.activeIndex];
     const zoomContainer = activeSlide?.querySelector('.swiper-zoom-container') as HTMLElement;
-    const img = zoomContainer?.querySelector('img') as HTMLElement;
 
-    if (!img || !zoomContainer) return;
+    if (!zoomContainer) return;
 
     let newScale = 1;
     if (zoomLevel === 1) {
@@ -89,9 +102,8 @@ export default function Archive() {
     }
 
     if (newScale > 1) {
-      zoomContainer.style.transform = `translate3d(0, 0, 0) scale(${newScale})`;
+      zoomContainer.style.transform = `translate3d(${dragState.x}px, ${dragState.y}px, 0) scale(${newScale})`;
       zoomContainer.style.transition = 'transform 0.3s';
-      img.style.cursor = 'move';
     }
   };
 
@@ -101,9 +113,8 @@ export default function Archive() {
 
     const activeSlide = swiper.slides[swiper.activeIndex];
     const zoomContainer = activeSlide?.querySelector('.swiper-zoom-container') as HTMLElement;
-    const img = zoomContainer?.querySelector('img') as HTMLElement;
 
-    if (!img || !zoomContainer) return;
+    if (!zoomContainer) return;
 
     let newScale = 1;
     if (zoomLevel === 3) {
@@ -114,11 +125,76 @@ export default function Archive() {
       setZoomLevel(1);
     }
 
-    zoomContainer.style.transform = `translate3d(0, 0, 0) scale(${newScale})`;
-    zoomContainer.style.transition = 'transform 0.3s';
-
     if (newScale === 1) {
-      img.style.cursor = 'zoom-in';
+      zoomContainer.style.transform = 'translate3d(0, 0, 0) scale(1)';
+      setDragState({ x: 0, y: 0, isDragging: false, startX: 0, startY: 0 });
+    } else {
+      zoomContainer.style.transform = `translate3d(${dragState.x}px, ${dragState.y}px, 0) scale(${newScale})`;
+    }
+    zoomContainer.style.transition = 'transform 0.3s';
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    // Only respond to left mouse button (button 0)
+    if (e.button === 0 && zoomLevel > 1) {
+      e.preventDefault(); // Prevent default drag behavior
+      e.stopPropagation(); // Prevent Swiper from receiving the event
+      setDragState({
+        ...dragState,
+        isDragging: true,
+        startX: e.clientX - dragState.x,
+        startY: e.clientY - dragState.y,
+      });
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (dragState.isDragging && zoomLevel > 1) {
+      e.stopPropagation(); // Prevent Swiper from receiving the event
+      const newX = e.clientX - dragState.startX;
+      const newY = e.clientY - dragState.startY;
+      setDragState({ ...dragState, x: newX, y: newY });
+
+      const swiper = swiperRef.current?.swiper;
+      if (!swiper) return;
+      const activeSlide = swiper.slides[swiper.activeIndex];
+      const zoomContainer = activeSlide?.querySelector('.swiper-zoom-container') as HTMLElement;
+      if (zoomContainer) {
+        zoomContainer.style.transform = `translate3d(${newX}px, ${newY}px, 0) scale(${zoomLevel})`;
+      }
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (dragState.isDragging) {
+      setDragState({ ...dragState, isDragging: false });
+    }
+  };
+
+  const handleDoubleClick = () => {
+    if (zoomLevel < 3) {
+      handleZoomIn();
+    } else {
+      // Reset to 1x if already at max zoom
+      const swiper = swiperRef.current?.swiper;
+      if (!swiper) return;
+
+      const activeSlide = swiper.slides[swiper.activeIndex];
+      const zoomContainer = activeSlide?.querySelector('.swiper-zoom-container') as HTMLElement;
+
+      if (zoomContainer) {
+        zoomContainer.style.transform = 'translate3d(0, 0, 0) scale(1)';
+        zoomContainer.style.transition = 'transform 0.3s';
+        setDragState({ x: 0, y: 0, isDragging: false, startX: 0, startY: 0 });
+        setZoomLevel(1);
+      }
+    }
+  };
+
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    // Only close if clicking directly on the overlay background, not its children
+    if (e.target === e.currentTarget) {
+      closeModal();
     }
   };
 
@@ -148,7 +224,7 @@ export default function Archive() {
       </div>
 
       {selectedImageIndex !== null && (
-        <div className="lightbox-overlay">
+        <div className="lightbox-overlay" onClick={handleOverlayClick}>
           <div className="lightbox-header">
             <div className="image-counter">
               {currentSlide + 1} / {archiveImages.length}
@@ -192,22 +268,46 @@ export default function Archive() {
             }}
             keyboard={{ enabled: true }}
             loop={true}
+            allowTouchMove={zoomLevel === 1}
             onSlideChange={(swiper) => {
               setCurrentSlide(swiper.realIndex);
+
+              // Reset zoom state
               setZoomLevel(1);
-              const activeSlide = swiper.slides[swiper.activeIndex];
-              const zoomContainer = activeSlide?.querySelector('.swiper-zoom-container') as HTMLElement;
-              if (zoomContainer) {
-                zoomContainer.style.transform = 'translate3d(0, 0, 0) scale(1)';
-              }
+              setDragState({ x: 0, y: 0, isDragging: false, startX: 0, startY: 0 });
+
+              // Reset all slide transforms to ensure clean state
+              swiper.slides.forEach((slide) => {
+                const zoomContainer = slide?.querySelector('.swiper-zoom-container') as HTMLElement;
+                if (zoomContainer) {
+                  zoomContainer.style.transform = 'translate3d(0, 0, 0) scale(1)';
+                  zoomContainer.style.transition = '';
+                }
+              });
             }}
             className="lightbox-swiper"
           >
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
+            <div
+              className="swiper-button-prev"
+              onClick={() => swiperRef.current?.swiper?.slidePrev()}
+            ></div>
+            <div
+              className="swiper-button-next"
+              onClick={() => swiperRef.current?.swiper?.slideNext()}
+            ></div>
             {archiveImages.map((image, index) => (
               <SwiperSlide key={index}>
-                <div className="swiper-zoom-container">
+                <div
+                  className={`swiper-zoom-container ${zoomLevel > 1 ? 'swiper-no-swiping' : ''}`}
+                  onMouseDown={handleMouseDown}
+                  onMouseMove={handleMouseMove}
+                  onMouseUp={handleMouseUp}
+                  onMouseLeave={handleMouseUp}
+                  onDoubleClick={handleDoubleClick}
+                  style={{
+                    cursor: zoomLevel > 1 ? 'move' : 'zoom-in',
+                  }}
+                >
                   <img src={image.src} alt={image.alt} />
                 </div>
               </SwiperSlide>
