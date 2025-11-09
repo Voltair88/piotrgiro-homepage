@@ -1,8 +1,22 @@
 [[headers]]
-  for = "/*"
+  for = "/*.html"
   [headers.values]
-  cache-control = "public, max-age=3600"
+  cache-control = "public, max-age=300, must-revalidate"
 
+# WebP: correct MIME + safe caching, no negotiation surprises
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+  Content-Type = "image/webp"
+  cache-control = "public, max-age=3600, stale-while-revalidate=86400"
+  X-Content-Type-Options = "nosniff"
+
+# PNG/JPG, if you have them too
+[[headers]]
+  for = "/*.(png|jpg|jpeg)"
+  [headers.values]
+  cache-control = "public, max-age=31536000, immutable"
+  
 # Legacy URL redirects to maintain SEO
 [[redirects]]
   from = "/en/nu/"
