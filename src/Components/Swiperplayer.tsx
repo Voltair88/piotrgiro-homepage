@@ -1,7 +1,6 @@
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+import { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';
-SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 type Props = {
   slides: Array<{
@@ -10,33 +9,30 @@ type Props = {
     alt: string;
   }>;
 };
+
 export default function Home({ slides }: Props) {
-  const swiperOptions = {
-    slidesPerView: 1,
-    spaceBetween: 3,
-    loop: true,
-    speed: 1500,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: { clickable: true, el: '.swiper-pagination' },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  };
   return (
     <div>
-      <Swiper {...swiperOptions}>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
+      <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
+        slidesPerView={1}
+        spaceBetween={3}
+        loop={true}
+        speed={1500}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+      >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <img src={slide.src} alt={slide.alt} className="skeleton" />
           </SwiperSlide>
         ))}
-        <div className="swiper-pagination"></div>
       </Swiper>
     </div>
   );
