@@ -18,9 +18,6 @@ export const translationSvenska = {
     'Som dansare har Piotr framfört repertoar och dansverk till några av världens största  danskompanier och koreografer bland annat <i>Ultima Vez / Wim Vandekeybus, Batsheva Dance Company, Cullbergbaletten, La La La Human Steps / Édouard Lock, Ohad Naharin, Angelin Preljocaj, Josef Nadj, Örjan Andersson, Fredrik ”Benke” Rydman, Jens Östberg, Helena Franzén, Bogdan & Carina, Ina Christel Johannessen, Carl-Olof Berg, Hans Marklund. </i>',
   Dancerpt2:
     'Piotr har samarbetat med musikerna <i>David Byrne</i> och med <i>Marc Ribot</i> under tiden med Ultima Vez i Belgien, \n hösten 2012 hjälpte han <i>Håkan Hellström</i> med rörelse inför sin Sverige turné. \n \n',
-  Dancer1: '2019 - koreograferade NK-Galan på Eric Ericsonhallen.',
-  Dancer2: '2014 - koreograferade Azerbaijans Eurovision bidrag till artisten <i>Dilara  Kazimova</i> - Start A Fire.',
-  Dancer3: '2010 - Koreograferade Pippi Långstrump på Svenska Teatern i Helsingfors.',
   STkontaktaMig: 'Kontakta direkt',
   STkontakta1: ' eller besök',
   STkontakta: 'Stockholmsgruppen',

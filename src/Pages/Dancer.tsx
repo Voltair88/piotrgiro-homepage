@@ -45,11 +45,6 @@ export default function Actor() {
       <div className="Text">
         <h1>{t('Dansaren')}</h1>
         <p><Trans components={{ italic: <i></i> }} t={t}>{t('Dancer')}</Trans></p>
-        <ul>
-          <li>{t('Dancer1')}</li>
-          <li><Trans components={{ italic: <i></i> }} t={t}>{t('Dancer2')}</Trans></li>
-          <li>{t('Dancer3')}</li>
-        </ul>
         <p><Trans components={{ italic: <i></i> }} t={t}>{t('Dancerpt2')}</Trans></p>
       </div>
     </Bio>
